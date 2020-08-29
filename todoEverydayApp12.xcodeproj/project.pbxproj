@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		209E836E132057B522F483BF /* Pods_todoEverydayApp12.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C300D29EA3A1952F0229FF63 /* Pods_todoEverydayApp12.framework */; };
 		5A32147C24F9E03600BEA4EA /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A32147B24F9E03600BEA4EA /* WeatherViewController.swift */; };
+		5A7366E924F9EA2300FE2B85 /* thunderIcon.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A7366E024F9EA2200FE2B85 /* thunderIcon.json */; };
+		5A7366EA24F9EA2300FE2B85 /* RainIcon.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A7366E124F9EA2300FE2B85 /* RainIcon.json */; };
+		5A7366EB24F9EA2300FE2B85 /* CloudIcon.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A7366E224F9EA2300FE2B85 /* CloudIcon.json */; };
+		5A7366EC24F9EA2300FE2B85 /* rainbackgroundAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A7366E324F9EA2300FE2B85 /* rainbackgroundAnimation.json */; };
+		5A7366ED24F9EA2300FE2B85 /* rainAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A7366E424F9EA2300FE2B85 /* rainAnimation.json */; };
+		5A7366EE24F9EA2300FE2B85 /* snowIcon.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A7366E524F9EA2300FE2B85 /* snowIcon.json */; };
+		5A7366EF24F9EA2300FE2B85 /* SunnyIcon.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A7366E624F9EA2300FE2B85 /* SunnyIcon.json */; };
+		5A7366F024F9EA2300FE2B85 /* checkAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A7366E724F9EA2300FE2B85 /* checkAnimation.json */; };
+		5A7366F124F9EA2300FE2B85 /* windyIcon.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A7366E824F9EA2300FE2B85 /* windyIcon.json */; };
 		5AB07E4424F9DA3B0084C70C /* memoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB07E4324F9DA3B0084C70C /* memoViewController.swift */; };
 		5AFB7CF724EF28F600A56F42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7CF624EF28F600A56F42 /* AppDelegate.swift */; };
 		5AFB7CF924EF28F600A56F42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7CF824EF28F600A56F42 /* SceneDelegate.swift */; };
@@ -51,6 +60,15 @@
 /* Begin PBXFileReference section */
 		28DE569A531A7813F1FCC3AB /* Pods-todoEverydayApp12.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todoEverydayApp12.release.xcconfig"; path = "Target Support Files/Pods-todoEverydayApp12/Pods-todoEverydayApp12.release.xcconfig"; sourceTree = "<group>"; };
 		5A32147B24F9E03600BEA4EA /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		5A7366E024F9EA2200FE2B85 /* thunderIcon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = thunderIcon.json; sourceTree = "<group>"; };
+		5A7366E124F9EA2300FE2B85 /* RainIcon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RainIcon.json; sourceTree = "<group>"; };
+		5A7366E224F9EA2300FE2B85 /* CloudIcon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CloudIcon.json; sourceTree = "<group>"; };
+		5A7366E324F9EA2300FE2B85 /* rainbackgroundAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rainbackgroundAnimation.json; sourceTree = "<group>"; };
+		5A7366E424F9EA2300FE2B85 /* rainAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rainAnimation.json; sourceTree = "<group>"; };
+		5A7366E524F9EA2300FE2B85 /* snowIcon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = snowIcon.json; sourceTree = "<group>"; };
+		5A7366E624F9EA2300FE2B85 /* SunnyIcon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SunnyIcon.json; sourceTree = "<group>"; };
+		5A7366E724F9EA2300FE2B85 /* checkAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = checkAnimation.json; sourceTree = "<group>"; };
+		5A7366E824F9EA2300FE2B85 /* windyIcon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = windyIcon.json; sourceTree = "<group>"; };
 		5AB07E4324F9DA3B0084C70C /* memoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memoViewController.swift; sourceTree = "<group>"; };
 		5AFB7CF324EF28F600A56F42 /* todoEverydayApp12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todoEverydayApp12.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AFB7CF624EF28F600A56F42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +171,15 @@
 				5AFB7CFF24EF28F900A56F42 /* Assets.xcassets */,
 				5AFB7D0124EF28F900A56F42 /* LaunchScreen.storyboard */,
 				5AFB7D0424EF28F900A56F42 /* Info.plist */,
+				5A7366E724F9EA2300FE2B85 /* checkAnimation.json */,
+				5A7366E224F9EA2300FE2B85 /* CloudIcon.json */,
+				5A7366E424F9EA2300FE2B85 /* rainAnimation.json */,
+				5A7366E324F9EA2300FE2B85 /* rainbackgroundAnimation.json */,
+				5A7366E124F9EA2300FE2B85 /* RainIcon.json */,
+				5A7366E524F9EA2300FE2B85 /* snowIcon.json */,
+				5A7366E624F9EA2300FE2B85 /* SunnyIcon.json */,
+				5A7366E024F9EA2200FE2B85 /* thunderIcon.json */,
+				5A7366E824F9EA2300FE2B85 /* windyIcon.json */,
 			);
 			path = todoEverydayApp12;
 			sourceTree = "<group>";
@@ -274,10 +301,19 @@
 				5AFB7D0324EF28F900A56F42 /* LaunchScreen.storyboard in Resources */,
 				5AFB7D0024EF28F900A56F42 /* Assets.xcassets in Resources */,
 				5AFB7D3424EF2C8D00A56F42 /* WeatherCell.xib in Resources */,
+				5A7366EE24F9EA2300FE2B85 /* snowIcon.json in Resources */,
+				5A7366EF24F9EA2300FE2B85 /* SunnyIcon.json in Resources */,
+				5A7366E924F9EA2300FE2B85 /* thunderIcon.json in Resources */,
+				5A7366ED24F9EA2300FE2B85 /* rainAnimation.json in Resources */,
 				5AFB7D3224EF2C8600A56F42 /* NewsCell.xib in Resources */,
+				5A7366F024F9EA2300FE2B85 /* checkAnimation.json in Resources */,
 				5AFB7D4A24EF301800A56F42 /* TodoInputView.xib in Resources */,
+				5A7366F124F9EA2300FE2B85 /* windyIcon.json in Resources */,
+				5A7366EA24F9EA2300FE2B85 /* RainIcon.json in Resources */,
 				5AFB7CFE24EF28F600A56F42 /* Main.storyboard in Resources */,
+				5A7366EB24F9EA2300FE2B85 /* CloudIcon.json in Resources */,
 				5AFB7D3024EF2C7A00A56F42 /* ToDoCell.xib in Resources */,
+				5A7366EC24F9EA2300FE2B85 /* rainbackgroundAnimation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
