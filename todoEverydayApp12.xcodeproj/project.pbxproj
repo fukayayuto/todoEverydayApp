@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		209E836E132057B522F483BF /* Pods_todoEverydayApp12.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C300D29EA3A1952F0229FF63 /* Pods_todoEverydayApp12.framework */; };
+		5A32147C24F9E03600BEA4EA /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A32147B24F9E03600BEA4EA /* WeatherViewController.swift */; };
+		5AB07E4424F9DA3B0084C70C /* memoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB07E4324F9DA3B0084C70C /* memoViewController.swift */; };
+		5AFB7CF724EF28F600A56F42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7CF624EF28F600A56F42 /* AppDelegate.swift */; };
+		5AFB7CF924EF28F600A56F42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7CF824EF28F600A56F42 /* SceneDelegate.swift */; };
+		5AFB7CFE24EF28F600A56F42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB7CFC24EF28F600A56F42 /* Main.storyboard */; };
+		5AFB7D0024EF28F900A56F42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB7CFF24EF28F900A56F42 /* Assets.xcassets */; };
+		5AFB7D0324EF28F900A56F42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB7D0124EF28F900A56F42 /* LaunchScreen.storyboard */; };
+		5AFB7D0E24EF294A00A56F42 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D0D24EF294A00A56F42 /* TodoListViewController.swift */; };
+		5AFB7D1024EF2BB100A56F42 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D0F24EF2BB100A56F42 /* TimePicker.swift */; };
+		5AFB7D1224EF2BC900A56F42 /* AddMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D1124EF2BC900A56F42 /* AddMemoViewController.swift */; };
+		5AFB7D1424EF2BD800A56F42 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D1324EF2BD800A56F42 /* DetailViewController.swift */; };
+		5AFB7D1624EF2BDF00A56F42 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D1524EF2BDF00A56F42 /* ConfigurationViewController.swift */; };
+		5AFB7D1A24EF2BF300A56F42 /* MojiChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D1924EF2BF300A56F42 /* MojiChangeViewController.swift */; };
+		5AFB7D1C24EF2BFB00A56F42 /* MojiChange2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D1B24EF2BFB00A56F42 /* MojiChange2ViewController.swift */; };
+		5AFB7D1E24EF2C0300A56F42 /* SelectNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D1D24EF2C0300A56F42 /* SelectNewsViewController.swift */; };
+		5AFB7D2024EF2C3000A56F42 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D1F24EF2C3000A56F42 /* BaseViewController.swift */; };
+		5AFB7D2224EF2C3F00A56F42 /* News2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D2124EF2C3F00A56F42 /* News2ViewController.swift */; };
+		5AFB7D2924EF2C4B00A56F42 /* News6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D2324EF2C4A00A56F42 /* News6ViewController.swift */; };
+		5AFB7D2A24EF2C4B00A56F42 /* News7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D2424EF2C4A00A56F42 /* News7ViewController.swift */; };
+		5AFB7D2B24EF2C4B00A56F42 /* News8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D2524EF2C4B00A56F42 /* News8ViewController.swift */; };
+		5AFB7D2C24EF2C4B00A56F42 /* News4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D2624EF2C4B00A56F42 /* News4ViewController.swift */; };
+		5AFB7D2D24EF2C4B00A56F42 /* News5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D2724EF2C4B00A56F42 /* News5ViewController.swift */; };
+		5AFB7D2E24EF2C4B00A56F42 /* News3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D2824EF2C4B00A56F42 /* News3ViewController.swift */; };
+		5AFB7D3024EF2C7A00A56F42 /* ToDoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB7D2F24EF2C7A00A56F42 /* ToDoCell.xib */; };
+		5AFB7D3224EF2C8600A56F42 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB7D3124EF2C8600A56F42 /* NewsCell.xib */; };
+		5AFB7D3424EF2C8D00A56F42 /* WeatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB7D3324EF2C8D00A56F42 /* WeatherCell.xib */; };
+		5AFB7D3624EF2CAF00A56F42 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D3524EF2CAF00A56F42 /* Weather.swift */; };
+		5AFB7D3824EF2CEF00A56F42 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D3724EF2CEF00A56F42 /* WeatherCell.swift */; };
+		5AFB7D3A24EF2CFD00A56F42 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D3924EF2CFD00A56F42 /* NewsCell.swift */; };
+		5AFB7D3C24EF2D0800A56F42 /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D3B24EF2D0800A56F42 /* NewsData.swift */; };
+		5AFB7D3E24EF2D2100A56F42 /* TodoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D3D24EF2D2100A56F42 /* TodoData.swift */; };
+		5AFB7D4024EF2D4500A56F42 /* SelectNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D3F24EF2D4500A56F42 /* SelectNewsCell.swift */; };
+		5AFB7D4224EF2D5C00A56F42 /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D4124EF2D5B00A56F42 /* ToDoCell.swift */; };
+		5AFB7D4424EF2EB500A56F42 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D4324EF2EB500A56F42 /* DatePicker.swift */; };
+		5AFB7D4624EF2F5C00A56F42 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D4524EF2F5C00A56F42 /* NewsViewController.swift */; };
+		5AFB7D4824EF2F9400A56F42 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D4724EF2F9400A56F42 /* WebViewController.swift */; };
+		5AFB7D4A24EF301800A56F42 /* TodoInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB7D4924EF301800A56F42 /* TodoInputView.xib */; };
+		5AFB7D4C24EF35EC00A56F42 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D4B24EF35EC00A56F42 /* InputViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		28DE569A531A7813F1FCC3AB /* Pods-todoEverydayApp12.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todoEverydayApp12.release.xcconfig"; path = "Target Support Files/Pods-todoEverydayApp12/Pods-todoEverydayApp12.release.xcconfig"; sourceTree = "<group>"; };
+		5A32147B24F9E03600BEA4EA /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		5AB07E4324F9DA3B0084C70C /* memoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memoViewController.swift; sourceTree = "<group>"; };
+		5AFB7CF324EF28F600A56F42 /* todoEverydayApp12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todoEverydayApp12.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AFB7CF624EF28F600A56F42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5AFB7CF824EF28F600A56F42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5AFB7CFD24EF28F600A56F42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5AFB7CFF24EF28F900A56F42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5AFB7D0224EF28F900A56F42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5AFB7D0424EF28F900A56F42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AFB7D0D24EF294A00A56F42 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
+		5AFB7D0F24EF2BB100A56F42 /* TimePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
+		5AFB7D1124EF2BC900A56F42 /* AddMemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMemoViewController.swift; sourceTree = "<group>"; };
+		5AFB7D1324EF2BD800A56F42 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5AFB7D1524EF2BDF00A56F42 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
+		5AFB7D1924EF2BF300A56F42 /* MojiChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MojiChangeViewController.swift; sourceTree = "<group>"; };
+		5AFB7D1B24EF2BFB00A56F42 /* MojiChange2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MojiChange2ViewController.swift; sourceTree = "<group>"; };
+		5AFB7D1D24EF2C0300A56F42 /* SelectNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectNewsViewController.swift; sourceTree = "<group>"; };
+		5AFB7D1F24EF2C3000A56F42 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		5AFB7D2124EF2C3F00A56F42 /* News2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News2ViewController.swift; sourceTree = "<group>"; };
+		5AFB7D2324EF2C4A00A56F42 /* News6ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News6ViewController.swift; sourceTree = "<group>"; };
+		5AFB7D2424EF2C4A00A56F42 /* News7ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News7ViewController.swift; sourceTree = "<group>"; };
+		5AFB7D2524EF2C4B00A56F42 /* News8ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News8ViewController.swift; sourceTree = "<group>"; };
+		5AFB7D2624EF2C4B00A56F42 /* News4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News4ViewController.swift; sourceTree = "<group>"; };
+		5AFB7D2724EF2C4B00A56F42 /* News5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News5ViewController.swift; sourceTree = "<group>"; };
+		5AFB7D2824EF2C4B00A56F42 /* News3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News3ViewController.swift; sourceTree = "<group>"; };
+		5AFB7D2F24EF2C7A00A56F42 /* ToDoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToDoCell.xib; sourceTree = "<group>"; };
+		5AFB7D3124EF2C8600A56F42 /* NewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
+		5AFB7D3324EF2C8D00A56F42 /* WeatherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherCell.xib; sourceTree = "<group>"; };
+		5AFB7D3524EF2CAF00A56F42 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		5AFB7D3724EF2CEF00A56F42 /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		5AFB7D3924EF2CFD00A56F42 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		5AFB7D3B24EF2D0800A56F42 /* NewsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsData.swift; sourceTree = "<group>"; };
+		5AFB7D3D24EF2D2100A56F42 /* TodoData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoData.swift; sourceTree = "<group>"; };
+		5AFB7D3F24EF2D4500A56F42 /* SelectNewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectNewsCell.swift; sourceTree = "<group>"; };
+		5AFB7D4124EF2D5B00A56F42 /* ToDoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
+		5AFB7D4324EF2EB500A56F42 /* DatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
+		5AFB7D4524EF2F5C00A56F42 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		5AFB7D4724EF2F9400A56F42 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		5AFB7D4924EF301800A56F42 /* TodoInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodoInputView.xib; sourceTree = "<group>"; };
+		5AFB7D4B24EF35EC00A56F42 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		C300D29EA3A1952F0229FF63 /* Pods_todoEverydayApp12.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_todoEverydayApp12.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F70B6A9C464FC907F9EFCAA6 /* Pods-todoEverydayApp12.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todoEverydayApp12.debug.xcconfig"; path = "Target Support Files/Pods-todoEverydayApp12/Pods-todoEverydayApp12.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5AFB7CF024EF28F600A56F42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				209E836E132057B522F483BF /* Pods_todoEverydayApp12.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		141C6F540AEB3DBAB51CC607 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F70B6A9C464FC907F9EFCAA6 /* Pods-todoEverydayApp12.debug.xcconfig */,
+				28DE569A531A7813F1FCC3AB /* Pods-todoEverydayApp12.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4493EA6BFA9A7CC1CEDDC13A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C300D29EA3A1952F0229FF63 /* Pods_todoEverydayApp12.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5AFB7CEA24EF28F600A56F42 = {
+			isa = PBXGroup;
+			children = (
+				5AFB7CF524EF28F600A56F42 /* todoEverydayApp12 */,
+				5AFB7CF424EF28F600A56F42 /* Products */,
+				141C6F540AEB3DBAB51CC607 /* Pods */,
+				4493EA6BFA9A7CC1CEDDC13A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5AFB7CF424EF28F600A56F42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5AFB7CF324EF28F600A56F42 /* todoEverydayApp12.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5AFB7CF524EF28F600A56F42 /* todoEverydayApp12 */ = {
+			isa = PBXGroup;
+			children = (
+				5AFB7CFC24EF28F600A56F42 /* Main.storyboard */,
+				5AFB7D0A24EF290600A56F42 /* Model */,
+				5AFB7D0B24EF291100A56F42 /* View */,
+				5AFB7D0C24EF291800A56F42 /* Controller */,
+				5AFB7CF824EF28F600A56F42 /* SceneDelegate.swift */,
+				5AFB7CF624EF28F600A56F42 /* AppDelegate.swift */,
+				5AFB7CFF24EF28F900A56F42 /* Assets.xcassets */,
+				5AFB7D0124EF28F900A56F42 /* LaunchScreen.storyboard */,
+				5AFB7D0424EF28F900A56F42 /* Info.plist */,
+			);
+			path = todoEverydayApp12;
+			sourceTree = "<group>";
+		};
+		5AFB7D0A24EF290600A56F42 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5AFB7D0F24EF2BB100A56F42 /* TimePicker.swift */,
+				5AFB7D3B24EF2D0800A56F42 /* NewsData.swift */,
+				5AFB7D4124EF2D5B00A56F42 /* ToDoCell.swift */,
+				5AFB7D3524EF2CAF00A56F42 /* Weather.swift */,
+				5AFB7D3D24EF2D2100A56F42 /* TodoData.swift */,
+				5AFB7D3724EF2CEF00A56F42 /* WeatherCell.swift */,
+				5AFB7D3924EF2CFD00A56F42 /* NewsCell.swift */,
+				5AFB7D3F24EF2D4500A56F42 /* SelectNewsCell.swift */,
+				5AFB7D4324EF2EB500A56F42 /* DatePicker.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5AFB7D0B24EF291100A56F42 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5AFB7D2F24EF2C7A00A56F42 /* ToDoCell.xib */,
+				5AFB7D3124EF2C8600A56F42 /* NewsCell.xib */,
+				5AFB7D3324EF2C8D00A56F42 /* WeatherCell.xib */,
+				5AFB7D4924EF301800A56F42 /* TodoInputView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5AFB7D0C24EF291800A56F42 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5AFB7D0D24EF294A00A56F42 /* TodoListViewController.swift */,
+				5AFB7D1F24EF2C3000A56F42 /* BaseViewController.swift */,
+				5A32147B24F9E03600BEA4EA /* WeatherViewController.swift */,
+				5AFB7D4524EF2F5C00A56F42 /* NewsViewController.swift */,
+				5AFB7D2124EF2C3F00A56F42 /* News2ViewController.swift */,
+				5AFB7D2824EF2C4B00A56F42 /* News3ViewController.swift */,
+				5AFB7D2624EF2C4B00A56F42 /* News4ViewController.swift */,
+				5AFB7D2724EF2C4B00A56F42 /* News5ViewController.swift */,
+				5AFB7D2324EF2C4A00A56F42 /* News6ViewController.swift */,
+				5AFB7D2424EF2C4A00A56F42 /* News7ViewController.swift */,
+				5AFB7D2524EF2C4B00A56F42 /* News8ViewController.swift */,
+				5AFB7D4724EF2F9400A56F42 /* WebViewController.swift */,
+				5AB07E4324F9DA3B0084C70C /* memoViewController.swift */,
+				5AFB7D1124EF2BC900A56F42 /* AddMemoViewController.swift */,
+				5AFB7D1324EF2BD800A56F42 /* DetailViewController.swift */,
+				5AFB7D1524EF2BDF00A56F42 /* ConfigurationViewController.swift */,
+				5AFB7D1924EF2BF300A56F42 /* MojiChangeViewController.swift */,
+				5AFB7D1B24EF2BFB00A56F42 /* MojiChange2ViewController.swift */,
+				5AFB7D1D24EF2C0300A56F42 /* SelectNewsViewController.swift */,
+				5AFB7D4B24EF35EC00A56F42 /* InputViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5AFB7CF224EF28F600A56F42 /* todoEverydayApp12 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AFB7D0724EF28F900A56F42 /* Build configuration list for PBXNativeTarget "todoEverydayApp12" */;
+			buildPhases = (
+				8CFD830D588BAB98C77A28C5 /* [CP] Check Pods Manifest.lock */,
+				5AFB7CEF24EF28F600A56F42 /* Sources */,
+				5AFB7CF024EF28F600A56F42 /* Frameworks */,
+				5AFB7CF124EF28F600A56F42 /* Resources */,
+				1E4C59A7B12667F71BCE37D4 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = todoEverydayApp12;
+			productName = todoEverydayApp12;
+			productReference = 5AFB7CF324EF28F600A56F42 /* todoEverydayApp12.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5AFB7CEB24EF28F600A56F42 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "yuto fukaya";
+				TargetAttributes = {
+					5AFB7CF224EF28F600A56F42 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = 5AFB7CEE24EF28F600A56F42 /* Build configuration list for PBXProject "todoEverydayApp12" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5AFB7CEA24EF28F600A56F42;
+			productRefGroup = 5AFB7CF424EF28F600A56F42 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5AFB7CF224EF28F600A56F42 /* todoEverydayApp12 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5AFB7CF124EF28F600A56F42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AFB7D0324EF28F900A56F42 /* LaunchScreen.storyboard in Resources */,
+				5AFB7D0024EF28F900A56F42 /* Assets.xcassets in Resources */,
+				5AFB7D3424EF2C8D00A56F42 /* WeatherCell.xib in Resources */,
+				5AFB7D3224EF2C8600A56F42 /* NewsCell.xib in Resources */,
+				5AFB7D4A24EF301800A56F42 /* TodoInputView.xib in Resources */,
+				5AFB7CFE24EF28F600A56F42 /* Main.storyboard in Resources */,
+				5AFB7D3024EF2C7A00A56F42 /* ToDoCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E4C59A7B12667F71BCE37D4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-todoEverydayApp12/Pods-todoEverydayApp12-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-todoEverydayApp12/Pods-todoEverydayApp12-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-todoEverydayApp12/Pods-todoEverydayApp12-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CFD830D588BAB98C77A28C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-todoEverydayApp12-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5AFB7CEF24EF28F600A56F42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AFB7D1C24EF2BFB00A56F42 /* MojiChange2ViewController.swift in Sources */,
+				5AFB7D2924EF2C4B00A56F42 /* News6ViewController.swift in Sources */,
+				5AFB7D1024EF2BB100A56F42 /* TimePicker.swift in Sources */,
+				5AFB7D1224EF2BC900A56F42 /* AddMemoViewController.swift in Sources */,
+				5AFB7D2C24EF2C4B00A56F42 /* News4ViewController.swift in Sources */,
+				5AFB7CF724EF28F600A56F42 /* AppDelegate.swift in Sources */,
+				5AFB7D3C24EF2D0800A56F42 /* NewsData.swift in Sources */,
+				5AFB7D4424EF2EB500A56F42 /* DatePicker.swift in Sources */,
+				5AFB7D4C24EF35EC00A56F42 /* InputViewController.swift in Sources */,
+				5AFB7D1424EF2BD800A56F42 /* DetailViewController.swift in Sources */,
+				5AB07E4424F9DA3B0084C70C /* memoViewController.swift in Sources */,
+				5AFB7D1624EF2BDF00A56F42 /* ConfigurationViewController.swift in Sources */,
+				5AFB7D0E24EF294A00A56F42 /* TodoListViewController.swift in Sources */,
+				5AFB7D4824EF2F9400A56F42 /* WebViewController.swift in Sources */,
+				5AFB7D1A24EF2BF300A56F42 /* MojiChangeViewController.swift in Sources */,
+				5AFB7D3A24EF2CFD00A56F42 /* NewsCell.swift in Sources */,
+				5AFB7D2D24EF2C4B00A56F42 /* News5ViewController.swift in Sources */,
+				5AFB7D3E24EF2D2100A56F42 /* TodoData.swift in Sources */,
+				5AFB7D4624EF2F5C00A56F42 /* NewsViewController.swift in Sources */,
+				5AFB7D4224EF2D5C00A56F42 /* ToDoCell.swift in Sources */,
+				5AFB7D2A24EF2C4B00A56F42 /* News7ViewController.swift in Sources */,
+				5AFB7D3824EF2CEF00A56F42 /* WeatherCell.swift in Sources */,
+				5AFB7D2B24EF2C4B00A56F42 /* News8ViewController.swift in Sources */,
+				5AFB7D3624EF2CAF00A56F42 /* Weather.swift in Sources */,
+				5AFB7D2E24EF2C4B00A56F42 /* News3ViewController.swift in Sources */,
+				5AFB7D1E24EF2C0300A56F42 /* SelectNewsViewController.swift in Sources */,
+				5A32147C24F9E03600BEA4EA /* WeatherViewController.swift in Sources */,
+				5AFB7D4024EF2D4500A56F42 /* SelectNewsCell.swift in Sources */,
+				5AFB7CF924EF28F600A56F42 /* SceneDelegate.swift in Sources */,
+				5AFB7D2224EF2C3F00A56F42 /* News2ViewController.swift in Sources */,
+				5AFB7D2024EF2C3000A56F42 /* BaseViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5AFB7CFC24EF28F600A56F42 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5AFB7CFD24EF28F600A56F42 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5AFB7D0124EF28F900A56F42 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5AFB7D0224EF28F900A56F42 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5AFB7D0524EF28F900A56F42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5AFB7D0624EF28F900A56F42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5AFB7D0824EF28F900A56F42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F70B6A9C464FC907F9EFCAA6 /* Pods-todoEverydayApp12.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LBBY2QM42G;
+				INFOPLIST_FILE = todoEverydayApp12/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fukaya.todoEverydayApp12;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5AFB7D0924EF28F900A56F42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28DE569A531A7813F1FCC3AB /* Pods-todoEverydayApp12.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LBBY2QM42G;
+				INFOPLIST_FILE = todoEverydayApp12/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fukaya.todoEverydayApp12;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5AFB7CEE24EF28F600A56F42 /* Build configuration list for PBXProject "todoEverydayApp12" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AFB7D0524EF28F900A56F42 /* Debug */,
+				5AFB7D0624EF28F900A56F42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AFB7D0724EF28F900A56F42 /* Build configuration list for PBXNativeTarget "todoEverydayApp12" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AFB7D0824EF28F900A56F42 /* Debug */,
+				5AFB7D0924EF28F900A56F42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5AFB7CEB24EF28F600A56F42 /* Project object */;
+}
