@@ -13,18 +13,18 @@ import JJFloatingActionButton
 class TodoViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,UIGestureRecognizerDelegate{
 
     @IBOutlet weak var todoTableView: UITableView!
-//    @IBOutlet weak var timeTextFiled: DatePickerKeyboard!
-//    @IBOutlet weak var todoTextField: UITextField!
-//    @IBOutlet weak var plusTodoView: UIView!
-//    @IBOutlet weak var deliteButton: UIButton!
-//
-//
-//    @IBOutlet weak var whiteButton: UIButton!
-//    @IBOutlet weak var blueButton: UIButton!
-//    @IBOutlet weak var yellowButton: UIButton!
-//    @IBOutlet weak var orangeButton: UIButton!
-//    @IBOutlet weak var greenButton: UIButton!
-//    @IBOutlet weak var plusButton: UIButton!
+    @IBOutlet weak var timeTextFiled: DatePickerKeyboard!
+    @IBOutlet weak var todoTextField: UITextField!
+    @IBOutlet weak var plusTodoView: UIView!
+    @IBOutlet weak var deliteButton: UIButton!
+
+
+    @IBOutlet weak var whiteButton: UIButton!
+    @IBOutlet weak var blueButton: UIButton!
+    @IBOutlet weak var yellowButton: UIButton!
+    @IBOutlet weak var orangeButton: UIButton!
+    @IBOutlet weak var greenButton: UIButton!
+    @IBOutlet weak var plusButton: UIButton!
     
     
 
@@ -40,7 +40,12 @@ class TodoViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     let actionButton = JJFloatingActionButton()
     
-     
+     var todoInputView :TodoInputView = {
+              let view = TodoInputView()
+              view.frame = .init(x: 0, y: 0, width: view.frame.width, height: 100)
+              return view
+          }()
+    
 
      override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,10 +55,10 @@ class TodoViewController: UIViewController,UITableViewDataSource,UITableViewDele
         todoTableView.dataSource = self
         
 //        plusTodoView.backgroundColor = UIColor(red: 0, green: 0.2, blue: 0.8, alpha: 0.6)
-        plusTodoView.isHidden = true
-        
-        timeTextFiled.delegate = self
-        todoTextField.delegate = self
+//        plusTodoView.isHidden = true
+//
+//        timeTextFiled.delegate = self
+//        todoTextField.delegate = self
        
         let timeData1 = TodoData()
         let timeDate1 = dateFromString(string:todoTimeArray[0])
@@ -143,6 +148,12 @@ class TodoViewController: UIViewController,UITableViewDataSource,UITableViewDele
 
             }
 
+    
+    override var inputAccessoryView: UIView?{
+        get {
+            return TodoInputView()
+        }
+    }
         
     
    
@@ -377,91 +388,91 @@ class TodoViewController: UIViewController,UITableViewDataSource,UITableViewDele
            })
     }
     
-    @IBAction func plusToDo(_ sender: Any) {
-        
-        plusTodoView.isHidden = false
-        actionButton.isHidden = true
-        timeTextFiled.text = ""
-        todoTextField.text = ""
-        
-    }
-    
-    
-    @IBAction func ToDoInput(_ sender: Any) {
-        
-        if timeTextFiled.text != "" && todoTextField.text != ""{
-        
-        var todoText:String = ""
-        var todoTime:String = ""
-        let todotimeCount:Int = todoTimeArray.count
-        let todotextCount:Int = todoTimeArray.count
-        let colorNumberCount:Int = colorNumberArray.count
-        
-        todoTime = timeTextFiled.text!
-        todoText = todoTextField.text!
-        
-        todoTextArray.append(todoText)
-        todoTimeArray.append(todoTime)
-        colorNumberArray.append(colorNumber)
-        
-            
-        let timeData4 = TodoData()
-        let timeDate4 = dateFromString(string:todoTimeArray[todotimeCount])
-        timeData4.date = timeDate4
-        timeData4.string = todoTextArray[todotextCount]
-        timeData4.Int = colorNumberArray[colorNumberCount]
-        DataArray.append(timeData4)
-        dataChange()
-       
-        todoTableView.reloadData()
-            
-        timeTextFiled.text = ""
-        todoTextField.text = ""
-        blueButton.layer.borderWidth = 0
-        yellowButton.layer.borderWidth = 0
-        orangeButton.layer.borderWidth = 0
-        greenButton.layer.borderWidth = 0
-        colorNumber = 0
-        plusTodoView.isHidden = true
-        actionButton.isHidden = false
-        
-            
-        }
-//        }else if todoTextField.text != ""{
+//    @IBAction func plusToDo(_ sender: Any) {
 //
-//            todoText = todoTextField.text!
-//            todoTextArray.append(todoText)
-//            todoTimeArray.append("")
-//            todoTextField.text = ""
-//            timeTextFiled.text = ""
-//            colorNumberArray.append(colorNumber)
-//            blueButton.layer.borderWidth = 0
-//            yellowButton.layer.borderWidth = 0
-//            colorNumber = 0
-//            plusTodoView.isHidden = true
-//            todoTableView.reloadData()
+//        plusTodoView.isHidden = false
+//        actionButton.isHidden = true
+//        timeTextFiled.text = ""
+//        todoTextField.text = ""
+//
+//    }
+    
+    
+//    @IBAction func ToDoInput(_ sender: Any) {
+//
+//        if timeTextFiled.text != "" && todoTextField.text != ""{
+//
+//        var todoText:String = ""
+//        var todoTime:String = ""
+//        let todotimeCount:Int = todoTimeArray.count
+//        let todotextCount:Int = todoTimeArray.count
+//        let colorNumberCount:Int = colorNumberArray.count
+//
+//        todoTime = timeTextFiled.text!
+//        todoText = todoTextField.text!
+//
+//        todoTextArray.append(todoText)
+//        todoTimeArray.append(todoTime)
+//        colorNumberArray.append(colorNumber)
+//
+//
+//        let timeData4 = TodoData()
+//        let timeDate4 = dateFromString(string:todoTimeArray[todotimeCount])
+//        timeData4.date = timeDate4
+//        timeData4.string = todoTextArray[todotextCount]
+//        timeData4.Int = colorNumberArray[colorNumberCount]
+//        DataArray.append(timeData4)
+//        dataChange()
+//
+//        todoTableView.reloadData()
+//
+//        timeTextFiled.text = ""
+//        todoTextField.text = ""
+//        blueButton.layer.borderWidth = 0
+//        yellowButton.layer.borderWidth = 0
+//        orangeButton.layer.borderWidth = 0
+//        greenButton.layer.borderWidth = 0
+//        colorNumber = 0
+//        plusTodoView.isHidden = true
+//        actionButton.isHidden = false
+//
 //
 //        }
-    }
-    
-    @IBAction func todoReturn(_ sender: Any) {
-        
-        timeTextFiled.text = ""
-        todoTextField.text = ""
-        plusTodoView.isHidden = true
-        blueButton.layer.borderWidth = 0
-        yellowButton.layer.borderWidth = 0
-        orangeButton.layer.borderWidth = 0
-        greenButton.layer.borderWidth = 0
-        colorNumber = 0
-        actionButton.isHidden = false
-        
-        
-    }
-    
-    
-    
-    
+////        }else if todoTextField.text != ""{
+////
+////            todoText = todoTextField.text!
+////            todoTextArray.append(todoText)
+////            todoTimeArray.append("")
+////            todoTextField.text = ""
+////            timeTextFiled.text = ""
+////            colorNumberArray.append(colorNumber)
+////            blueButton.layer.borderWidth = 0
+////            yellowButton.layer.borderWidth = 0
+////            colorNumber = 0
+////            plusTodoView.isHidden = true
+////            todoTableView.reloadData()
+////
+////        }
+//    }
+//
+//    @IBAction func todoReturn(_ sender: Any) {
+//
+//        timeTextFiled.text = ""
+//        todoTextField.text = ""
+//        plusTodoView.isHidden = true
+//        blueButton.layer.borderWidth = 0
+//        yellowButton.layer.borderWidth = 0
+//        orangeButton.layer.borderWidth = 0
+//        greenButton.layer.borderWidth = 0
+//        colorNumber = 0
+//        actionButton.isHidden = false
+//
+//
+//    }
+//
+//
+//
+//
     
     
 //

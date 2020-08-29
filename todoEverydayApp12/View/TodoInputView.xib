@@ -7,9 +7,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputViewController" customModule="todoEverydayApp12" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TodoInputView" customModule="todoEverydayApp12" customModuleProvider="target">
+            <connections>
+                <outlet property="blueButton" destination="uwf-FP-1aR" id="Tqu-5o-S9M"/>
+                <outlet property="deliteButton" destination="5eb-np-ND3" id="abS-lq-ctO"/>
+                <outlet property="greenButton" destination="JPv-3c-yej" id="wv3-VG-2Lk"/>
+                <outlet property="orangeButton" destination="qRf-u2-IB0" id="gIk-9F-BSW"/>
+                <outlet property="plusButton" destination="OWi-k1-HEw" id="i8M-ws-UqM"/>
+                <outlet property="plusTodoView" destination="OWi-k1-HEw" id="bWy-ur-lMQ"/>
+                <outlet property="timeTextFiled" destination="A84-Kx-n4O" id="94I-hB-3em"/>
+                <outlet property="todoTextField" destination="wG3-dA-F63" id="CLs-JL-yPc"/>
+                <outlet property="whiteButton" destination="XJ3-sL-UAT" id="jws-TT-smS"/>
+                <outlet property="yellowButton" destination="IF5-Qe-yNw" id="HCZ-Zs-GNf"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="InputView" customModule="todoEverydayApp12" customModuleProvider="target">
+        <view contentMode="scaleToFill" restorationIdentifier="TodoInputView" id="iN0-l3-epB" customClass="TodoInputView" customModule="todoEverydayApp12" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="259"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>

@@ -18,6 +18,7 @@
 		5A7366EF24F9EA2300FE2B85 /* SunnyIcon.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A7366E624F9EA2300FE2B85 /* SunnyIcon.json */; };
 		5A7366F024F9EA2300FE2B85 /* checkAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A7366E724F9EA2300FE2B85 /* checkAnimation.json */; };
 		5A7366F124F9EA2300FE2B85 /* windyIcon.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A7366E824F9EA2300FE2B85 /* windyIcon.json */; };
+		5A73671B24FA20A000FE2B85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A73671A24FA20A000FE2B85 /* GoogleService-Info.plist */; };
 		5AB07E4424F9DA3B0084C70C /* memoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB07E4324F9DA3B0084C70C /* memoViewController.swift */; };
 		5AFB7CF724EF28F600A56F42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7CF624EF28F600A56F42 /* AppDelegate.swift */; };
 		5AFB7CF924EF28F600A56F42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7CF824EF28F600A56F42 /* SceneDelegate.swift */; };
@@ -53,8 +54,8 @@
 		5AFB7D4424EF2EB500A56F42 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D4324EF2EB500A56F42 /* DatePicker.swift */; };
 		5AFB7D4624EF2F5C00A56F42 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D4524EF2F5C00A56F42 /* NewsViewController.swift */; };
 		5AFB7D4824EF2F9400A56F42 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D4724EF2F9400A56F42 /* WebViewController.swift */; };
-		5AFB7D4A24EF301800A56F42 /* InputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB7D4924EF301800A56F42 /* InputView.xib */; };
-		5AFB7D4C24EF35EC00A56F42 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D4B24EF35EC00A56F42 /* InputView.swift */; };
+		5AFB7D4A24EF301800A56F42 /* TodoInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB7D4924EF301800A56F42 /* TodoInputView.xib */; };
+		5AFB7D4C24EF35EC00A56F42 /* TodoInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7D4B24EF35EC00A56F42 /* TodoInputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		5A7366E624F9EA2300FE2B85 /* SunnyIcon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SunnyIcon.json; sourceTree = "<group>"; };
 		5A7366E724F9EA2300FE2B85 /* checkAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = checkAnimation.json; sourceTree = "<group>"; };
 		5A7366E824F9EA2300FE2B85 /* windyIcon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = windyIcon.json; sourceTree = "<group>"; };
+		5A73671A24FA20A000FE2B85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5AB07E4324F9DA3B0084C70C /* memoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memoViewController.swift; sourceTree = "<group>"; };
 		5AFB7CF324EF28F600A56F42 /* todoEverydayApp12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todoEverydayApp12.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AFB7CF624EF28F600A56F42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,8 +108,8 @@
 		5AFB7D4324EF2EB500A56F42 /* DatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		5AFB7D4524EF2F5C00A56F42 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		5AFB7D4724EF2F9400A56F42 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		5AFB7D4924EF301800A56F42 /* InputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputView.xib; sourceTree = "<group>"; };
-		5AFB7D4B24EF35EC00A56F42 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		5AFB7D4924EF301800A56F42 /* TodoInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodoInputView.xib; sourceTree = "<group>"; };
+		5AFB7D4B24EF35EC00A56F42 /* TodoInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoInputView.swift; sourceTree = "<group>"; };
 		C300D29EA3A1952F0229FF63 /* Pods_todoEverydayApp12.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_todoEverydayApp12.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70B6A9C464FC907F9EFCAA6 /* Pods-todoEverydayApp12.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todoEverydayApp12.debug.xcconfig"; path = "Target Support Files/Pods-todoEverydayApp12/Pods-todoEverydayApp12.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +173,7 @@
 				5AFB7CFF24EF28F900A56F42 /* Assets.xcassets */,
 				5AFB7D0124EF28F900A56F42 /* LaunchScreen.storyboard */,
 				5AFB7D0424EF28F900A56F42 /* Info.plist */,
+				5A73671A24FA20A000FE2B85 /* GoogleService-Info.plist */,
 				5A7366E724F9EA2300FE2B85 /* checkAnimation.json */,
 				5A7366E224F9EA2300FE2B85 /* CloudIcon.json */,
 				5A7366E424F9EA2300FE2B85 /* rainAnimation.json */,
@@ -206,7 +209,7 @@
 				5AFB7D2F24EF2C7A00A56F42 /* ToDoCell.xib */,
 				5AFB7D3124EF2C8600A56F42 /* NewsCell.xib */,
 				5AFB7D3324EF2C8D00A56F42 /* WeatherCell.xib */,
-				5AFB7D4924EF301800A56F42 /* InputView.xib */,
+				5AFB7D4924EF301800A56F42 /* TodoInputView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -233,7 +236,7 @@
 				5AFB7D1924EF2BF300A56F42 /* MojiChangeViewController.swift */,
 				5AFB7D1B24EF2BFB00A56F42 /* MojiChange2ViewController.swift */,
 				5AFB7D1D24EF2C0300A56F42 /* SelectNewsViewController.swift */,
-				5AFB7D4B24EF35EC00A56F42 /* InputView.swift */,
+				5AFB7D4B24EF35EC00A56F42 /* TodoInputView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A73671B24FA20A000FE2B85 /* GoogleService-Info.plist in Resources */,
 				5AFB7D0324EF28F900A56F42 /* LaunchScreen.storyboard in Resources */,
 				5AFB7D0024EF28F900A56F42 /* Assets.xcassets in Resources */,
 				5AFB7D3424EF2C8D00A56F42 /* WeatherCell.xib in Resources */,
@@ -307,7 +311,7 @@
 				5A7366ED24F9EA2300FE2B85 /* rainAnimation.json in Resources */,
 				5AFB7D3224EF2C8600A56F42 /* NewsCell.xib in Resources */,
 				5A7366F024F9EA2300FE2B85 /* checkAnimation.json in Resources */,
-				5AFB7D4A24EF301800A56F42 /* InputView.xib in Resources */,
+				5AFB7D4A24EF301800A56F42 /* TodoInputView.xib in Resources */,
 				5A7366F124F9EA2300FE2B85 /* windyIcon.json in Resources */,
 				5A7366EA24F9EA2300FE2B85 /* RainIcon.json in Resources */,
 				5AFB7CFE24EF28F600A56F42 /* Main.storyboard in Resources */,
@@ -374,7 +378,7 @@
 				5AFB7CF724EF28F600A56F42 /* AppDelegate.swift in Sources */,
 				5AFB7D3C24EF2D0800A56F42 /* NewsData.swift in Sources */,
 				5AFB7D4424EF2EB500A56F42 /* DatePicker.swift in Sources */,
-				5AFB7D4C24EF35EC00A56F42 /* InputView.swift in Sources */,
+				5AFB7D4C24EF35EC00A56F42 /* TodoInputView.swift in Sources */,
 				5AFB7D1424EF2BD800A56F42 /* DetailViewController.swift in Sources */,
 				5AB07E4424F9DA3B0084C70C /* memoViewController.swift in Sources */,
 				5AFB7D1624EF2BDF00A56F42 /* ConfigurationViewController.swift in Sources */,

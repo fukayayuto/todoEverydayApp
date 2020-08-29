@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>98119341867-9o11fahllge8oi750dfmjpub6goc4hcr.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.98119341867-9o11fahllge8oi750dfmjpub6goc4hcr</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDsfYQSZ3kkk2CPpJdxiNC7omRBg5L7irA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>98119341867</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.fukaya.todoEverydayApp12</string>
+	<key>PROJECT_ID</key>
+	<string>swift5todooriginalapp12</string>
+	<key>STORAGE_BUCKET</key>
+	<string>swift5todooriginalapp12.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:98119341867:ios:debe8d8976c11f31e7976e</string>
+	<key>DATABASE_URL</key>
+	<string>https://swift5todooriginalapp12.firebaseio.com</string>
+</dict>
+</plist>
