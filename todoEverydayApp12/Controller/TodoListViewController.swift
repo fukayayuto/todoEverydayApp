@@ -13,18 +13,18 @@ import JJFloatingActionButton
 class TodoViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,UIGestureRecognizerDelegate{
 
     @IBOutlet weak var todoTableView: UITableView!
-    @IBOutlet weak var timeTextFiled: DatePickerKeyboard!
-    @IBOutlet weak var todoTextField: UITextField!
-    @IBOutlet weak var plusTodoView: UIView!
-    @IBOutlet weak var deliteButton: UIButton!
-    
-    
-    @IBOutlet weak var whiteButton: UIButton!
-    @IBOutlet weak var blueButton: UIButton!
-    @IBOutlet weak var yellowButton: UIButton!
-    @IBOutlet weak var orangeButton: UIButton!
-    @IBOutlet weak var greenButton: UIButton!
-    @IBOutlet weak var plusButton: UIButton!
+//    @IBOutlet weak var timeTextFiled: DatePickerKeyboard!
+//    @IBOutlet weak var todoTextField: UITextField!
+//    @IBOutlet weak var plusTodoView: UIView!
+//    @IBOutlet weak var deliteButton: UIButton!
+//
+//
+//    @IBOutlet weak var whiteButton: UIButton!
+//    @IBOutlet weak var blueButton: UIButton!
+//    @IBOutlet weak var yellowButton: UIButton!
+//    @IBOutlet weak var orangeButton: UIButton!
+//    @IBOutlet weak var greenButton: UIButton!
+//    @IBOutlet weak var plusButton: UIButton!
     
     
 
@@ -177,61 +177,61 @@ class TodoViewController: UIViewController,UITableViewDataSource,UITableViewDele
      
           }
     
-    @IBAction func whiteButtonTap(_ sender: Any) {
-        
-        colorNumber = 0
-        blueButton.layer.borderWidth = 0
-        yellowButton.layer.borderWidth = 0
-        orangeButton.layer.borderWidth = 0
-        greenButton.layer.borderWidth = 0
-        
-    }
-    
-    
-    @IBAction func blueButtonTap(_ sender: Any) {
-        
-        blueButton.layer.borderColor = UIColor.white.cgColor
-        blueButton.layer.borderWidth = 2.0
-        yellowButton.layer.borderWidth = 0
-        orangeButton.layer.borderWidth = 0
-        greenButton.layer.borderWidth = 0
-        colorNumber = 1
-        
-    }
-    
-    @IBAction func yellowButtonTap(_ sender: Any) {
-        
-        yellowButton.layer.borderColor = UIColor.white.cgColor
-        yellowButton.layer.borderWidth = 2.0
-        blueButton.layer.borderWidth = 0
-        orangeButton.layer.borderWidth = 0
-        greenButton.layer.borderWidth = 0
-        colorNumber = 2
-    }
-    
-    @IBAction func orangeButtonTap(_ sender: Any) {
-        
-        orangeButton.layer.borderColor = UIColor.white.cgColor
-        orangeButton.layer.borderWidth = 2.0
-        blueButton.layer.borderWidth = 0
-        yellowButton.layer.borderWidth = 0
-        greenButton.layer.borderWidth = 0
-        colorNumber = 3
-        
-    }
-    
-    @IBAction func greenButtonTap(_ sender: Any) {
-        
-        greenButton.layer.borderColor = UIColor.white.cgColor
-        greenButton.layer.borderWidth = 2.0
-        blueButton.layer.borderWidth = 0
-        yellowButton.layer.borderWidth = 0
-        orangeButton.layer.borderWidth = 0
-        colorNumber = 4
-    }
-    
-    
-    
+//    @IBAction func whiteButtonTap(_ sender: Any) {
+//
+//        colorNumber = 0
+//        blueButton.layer.borderWidth = 0
+//        yellowButton.layer.borderWidth = 0
+//        orangeButton.layer.borderWidth = 0
+//        greenButton.layer.borderWidth = 0
+//
+//    }
+//
+//
+//    @IBAction func blueButtonTap(_ sender: Any) {
+//
+//        blueButton.layer.borderColor = UIColor.white.cgColor
+//        blueButton.layer.borderWidth = 2.0
+//        yellowButton.layer.borderWidth = 0
+//        orangeButton.layer.borderWidth = 0
+//        greenButton.layer.borderWidth = 0
+//        colorNumber = 1
+//
+//    }
+//
+//    @IBAction func yellowButtonTap(_ sender: Any) {
+//
+//        yellowButton.layer.borderColor = UIColor.white.cgColor
+//        yellowButton.layer.borderWidth = 2.0
+//        blueButton.layer.borderWidth = 0
+//        orangeButton.layer.borderWidth = 0
+//        greenButton.layer.borderWidth = 0
+//        colorNumber = 2
+//    }
+//
+//    @IBAction func orangeButtonTap(_ sender: Any) {
+//
+//        orangeButton.layer.borderColor = UIColor.white.cgColor
+//        orangeButton.layer.borderWidth = 2.0
+//        blueButton.layer.borderWidth = 0
+//        yellowButton.layer.borderWidth = 0
+//        greenButton.layer.borderWidth = 0
+//        colorNumber = 3
+//
+//    }
+//
+//    @IBAction func greenButtonTap(_ sender: Any) {
+//
+//        greenButton.layer.borderColor = UIColor.white.cgColor
+//        greenButton.layer.borderWidth = 2.0
+//        blueButton.layer.borderWidth = 0
+//        yellowButton.layer.borderWidth = 0
+//        orangeButton.layer.borderWidth = 0
+//        colorNumber = 4
+//    }
+//
+//
+//
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return todoTimeArray.count

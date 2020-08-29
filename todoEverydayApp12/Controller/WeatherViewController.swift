@@ -19,6 +19,7 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
     @IBOutlet weak var temprutureLabel: UILabel!
     @IBOutlet weak var MaxTempLabel: UILabel!
     @IBOutlet weak var MinTempLabel: UILabel!
+    @IBOutlet weak var timeMainTextLabel: UILabel!
     @IBOutlet weak var IconScrollView: UIScrollView!
     @IBOutlet weak var baceView: UIView!
     @IBOutlet weak var timeTextLabel: UILabel!
@@ -95,11 +96,16 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
-        
-        
-        getData(lat: lat, lon: lon)
-        
-        areaTextLabel.text = areaString
+        }
+  
+       
+            
+        print(areaString)
+        print(lat)
+        print(lon)
+            
+        areaTextLabel.text = "11111"
+        timeMainTextLabel.text = "00000"
         
         weatherIconLabel.text = weatherIconChange(weatherId: weatherId)
         timeTextLabel.text = timeText
@@ -203,10 +209,10 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
                         IconScrollView.backgroundColor = .lightGray
                     }
         
+            
         
         animationIcon()
-        }
-
+        
         let contentWidth = baceView.bounds.width*2
         let contentHeight = baceView.bounds.height
         IconScrollView.contentSize = CGSize(width: contentWidth, height: contentHeight)
@@ -228,15 +234,15 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
       }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-      let location = locations[0]
-      print(location)
-      
-     
-      lat = location.coordinate.latitude
-      lon = location.coordinate.longitude
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        lat = locValue.latitude
+        lon = locValue.longitude
         
+        getData(lat: lat, lon: lon)
     }
-    
+        
+       
+        
     
     func getData(lat:Double,lon:Double){
     //                let area = "1853908"
@@ -253,7 +259,7 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
                         case .success:
 
                         let json:JSON = JSON(responce.data as Any)
-                        print(json)
+//                        print(json)
                         self.weatherIcon = json["list"][0]["weather"][0]["main"].string!
                         let tempureture1 = json["list"][0]["main"]["temp"].double
                         let MaxTemp1 = json["list"][0]["main"]["temp_max"].double

@@ -19,102 +19,6 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MYa-rP-Tee">
-                                <rect key="frame" x="0.0" y="641" width="414" height="255"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="todoを入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lVf-xv-h1D">
-                                        <rect key="frame" x="40" y="90" width="228" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="時間を入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W9a-s6-odY" customClass="DatePickerKeyboard" customModule="todoEverydayApp12" customModuleProvider="target">
-                                        <rect key="frame" x="40" y="33" width="137" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHe-EB-Kgy">
-                                        <rect key="frame" x="283" y="89" width="64" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <state key="normal" title="追加">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="18"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="ToDoInput:" destination="KcO-aX-1zO" eventType="touchUpInside" id="ljU-xe-0yq"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cph-iJ-qd4">
-                                        <rect key="frame" x="90" y="155" width="33" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.35294117650000001" green="1" blue="1" alpha="0.79635233270000005" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <action selector="blueButtonTap:" destination="KcO-aX-1zO" eventType="touchUpInside" id="xQC-b5-ULg"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVa-zv-W6j">
-                                        <rect key="frame" x="145" y="155" width="33" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.85882352939999995" blue="0.33333333329999998" alpha="0.79825044010000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <action selector="yellowButtonTap:" destination="KcO-aX-1zO" eventType="touchUpInside" id="wyD-4j-xRJ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgp-s3-kN0">
-                                        <rect key="frame" x="201" y="155" width="33" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.88235294119999996" alpha="0.79723261440000004" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <action selector="orangeButtonTap:" destination="KcO-aX-1zO" eventType="touchUpInside" id="xQd-2b-uCX"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tj-QY-tlg">
-                                        <rect key="frame" x="259" y="155" width="33" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.28627450980000002" green="0.80784313730000001" blue="0.64313725489999995" alpha="0.79549955989999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <action selector="greenButtonTap:" destination="KcO-aX-1zO" eventType="touchUpInside" id="E0k-qj-oKE"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxI-rt-W4U">
-                                        <rect key="frame" x="40" y="155" width="33" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <action selector="blueButtonTap:" destination="KcO-aX-1zO" eventType="touchUpInside" id="Pc2-iz-Zri"/>
-                                            <action selector="whiteButtonTap:" destination="KcO-aX-1zO" eventType="touchUpInside" id="9T7-JC-QCP"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9W-wg-vqh">
-                                        <rect key="frame" x="361" y="7" width="34" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
-                                        <state key="normal" image="xmark" catalog="system">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="18"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="todoReturn:" destination="KcO-aX-1zO" eventType="touchUpInside" id="SUv-qm-jJ1"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80952904930000003" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
@@ -142,17 +46,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="blueButton" destination="Cph-iJ-qd4" id="bwf-xc-gYo"/>
-                        <outlet property="deliteButton" destination="V9W-wg-vqh" id="ORf-X0-i50"/>
-                        <outlet property="greenButton" destination="2tj-QY-tlg" id="FGo-Oo-vAh"/>
-                        <outlet property="orangeButton" destination="cgp-s3-kN0" id="Slj-Md-n3L"/>
-                        <outlet property="plusButton" destination="vHe-EB-Kgy" id="Fw3-lc-nzz"/>
-                        <outlet property="plusTodoView" destination="MYa-rP-Tee" id="y28-jj-qLD"/>
-                        <outlet property="timeTextFiled" destination="W9a-s6-odY" id="nqA-Fv-qrD"/>
-                        <outlet property="todoTableView" destination="Nxx-tX-SA8" id="jib-tb-61S"/>
-                        <outlet property="todoTextField" destination="lVf-xv-h1D" id="c0t-Jo-qpj"/>
-                        <outlet property="whiteButton" destination="cxI-rt-W4U" id="DU4-SB-UY4"/>
-                        <outlet property="yellowButton" destination="IVa-zv-W6j" id="0g0-ss-fz1"/>
+                        <outlet property="todoTableView" destination="Nxx-tX-SA8" id="vYX-5x-mxR"/>
                         <segue destination="bvg-BS-dNl" kind="show" identifier="memo" id="wbL-4R-Xg7"/>
                         <segue destination="uvn-91-FFt" kind="show" identifier="weather" id="Fk3-N5-ImI"/>
                     </connections>
@@ -943,6 +837,7 @@
                         <outlet property="tempTextLabelF" destination="277-hn-NEI" id="gZr-Oy-mly"/>
                         <outlet property="tempTextLabelG" destination="SCG-UI-YJ2" id="ajW-im-qhZ"/>
                         <outlet property="temprutureLabel" destination="reU-Te-bYU" id="4wI-mc-dz4"/>
+                        <outlet property="timeMainTextLabel" destination="XiI-e7-exV" id="kAl-2m-O3z"/>
                         <outlet property="timeTextLabel" destination="3R5-Zy-vvd" id="1Jf-4d-gGe"/>
                         <outlet property="timeTextLabelA" destination="59Q-xi-BrQ" id="8Fq-06-io2"/>
                         <outlet property="timeTextLabelB" destination="qLV-nf-3uD" id="Emt-fk-732"/>
@@ -981,6 +876,104 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WlM-y9-VcR" id="41N-js-ijD">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="769"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MYa-rP-Tee">
+                                            <rect key="frame" x="0.0" y="471" width="414" height="255"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="todoを入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lVf-xv-h1D">
+                                                    <rect key="frame" x="40" y="90" width="228" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="時間を入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W9a-s6-odY" customClass="DatePickerKeyboard" customModule="todoEverydayApp12" customModuleProvider="target">
+                                                    <rect key="frame" x="40" y="33" width="137" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHe-EB-Kgy">
+                                                    <rect key="frame" x="283" y="89" width="64" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <state key="normal" title="追加">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="18"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="ToDoInput:" destination="KcO-aX-1zO" eventType="touchUpInside" id="ljU-xe-0yq"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cph-iJ-qd4">
+                                                    <rect key="frame" x="90" y="155" width="33" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.35294117650000001" green="1" blue="1" alpha="0.79635233270000005" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <connections>
+                                                        <action selector="blueButtonTap:" destination="KcO-aX-1zO" eventType="touchUpInside" id="xQC-b5-ULg"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVa-zv-W6j">
+                                                    <rect key="frame" x="145" y="155" width="33" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="1" green="0.85882352939999995" blue="0.33333333329999998" alpha="0.79825044010000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <connections>
+                                                        <action selector="yellowButtonTap:" destination="KcO-aX-1zO" eventType="touchUpInside" id="wyD-4j-xRJ"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgp-s3-kN0">
+                                                    <rect key="frame" x="201" y="155" width="33" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.88235294119999996" alpha="0.79723261440000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <connections>
+                                                        <action selector="orangeButtonTap:" destination="KcO-aX-1zO" eventType="touchUpInside" id="xQd-2b-uCX"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tj-QY-tlg">
+                                                    <rect key="frame" x="259" y="155" width="33" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.28627450980000002" green="0.80784313730000001" blue="0.64313725489999995" alpha="0.79549955989999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <connections>
+                                                        <action selector="greenButtonTap:" destination="KcO-aX-1zO" eventType="touchUpInside" id="E0k-qj-oKE"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxI-rt-W4U">
+                                                    <rect key="frame" x="40" y="155" width="33" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <connections>
+                                                        <action selector="blueButtonTap:" destination="KcO-aX-1zO" eventType="touchUpInside" id="Pc2-iz-Zri"/>
+                                                        <action selector="whiteButtonTap:" destination="KcO-aX-1zO" eventType="touchUpInside" id="9T7-JC-QCP"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9W-wg-vqh">
+                                                    <rect key="frame" x="361" y="7" width="34" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                                    <state key="normal" image="xmark" catalog="system">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="18"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="todoReturn:" destination="KcO-aX-1zO" eventType="touchUpInside" id="SUv-qm-jJ1"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80952904930000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </view>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
