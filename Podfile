@@ -10,10 +10,7 @@ target 'todoEverydayApp12' do
   pod 'SegementSlide'
   pod 'Alamofire'
   pod ‘SwiftyJSON’
-  pod 'YYCalendar'
   pod 'lottie-ios'
   pod 'JJFloatingActionButton'
-  pod 'Firebase/Core'
-  pod 'Firebase/Messaging'
 
 end

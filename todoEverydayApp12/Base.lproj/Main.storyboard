@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ft3-Et-eZZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ft3-Et-eZZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Todo View Controller-->
+        <!--Todo List View Controller-->
         <scene sceneID="Lli-L3-0G2">
             <objects>
-                <viewController storyboardIdentifier="todoVIew" id="KcO-aX-1zO" customClass="TodoViewController" customModule="todoEverydayApp12" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="todoVIew" id="KcO-aX-1zO" customClass="TodoListViewController" customModule="todoEverydayApp12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="05A-Bv-esS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +21,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" id="MYa-rP-Tee">
-                                <rect key="frame" x="0.0" y="88" width="414" height="255"/>
+                                <rect key="frame" x="0.0" y="600" width="414" height="255"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="todoを入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lVf-xv-h1D">
@@ -50,10 +50,16 @@
                                                 <integer key="value" value="18"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="ToDoInput:" destination="KcO-aX-1zO" eventType="touchUpInside" id="DaX-n3-uEV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cph-iJ-qd4">
                                         <rect key="frame" x="93" y="155" width="30" height="34"/>
                                         <color key="backgroundColor" red="0.35294117650000001" green="1" blue="1" alpha="0.79635233270000005" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="blueButtonTap:" destination="KcO-aX-1zO" eventType="touchUpInside" id="i8Z-Ej-p0D"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVa-zv-W6j">
                                         <rect key="frame" x="145" y="155" width="33" height="34"/>
@@ -61,10 +67,16 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="33" id="yy5-Df-rYQ"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="yellowButtonTap:" destination="KcO-aX-1zO" eventType="touchUpInside" id="v55-VP-KMq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgp-s3-kN0">
                                         <rect key="frame" x="201" y="155" width="33" height="34"/>
                                         <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.88235294119999996" alpha="0.79723261440000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="orangeButtonTap:" destination="KcO-aX-1zO" eventType="touchUpInside" id="7ZL-gC-Xrp"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tj-QY-tlg">
                                         <rect key="frame" x="259" y="155" width="33" height="34"/>
@@ -72,6 +84,9 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="33" id="BCr-ev-QRp"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="greenButtonTap:" destination="KcO-aX-1zO" eventType="touchUpInside" id="7Y2-L9-PVC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxI-rt-W4U">
                                         <rect key="frame" x="40" y="155" width="33" height="34"/>
@@ -79,6 +94,9 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="33" id="qUu-el-C3W"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="whiteButtonTap:" destination="KcO-aX-1zO" eventType="touchUpInside" id="X9P-qV-AWr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9W-wg-vqh">
                                         <rect key="frame" x="361" y="7" width="34" height="34"/>
@@ -94,6 +112,9 @@
                                                 <integer key="value" value="18"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="deliteTap:" destination="KcO-aX-1zO" eventType="touchUpInside" id="gUs-VZ-Tea"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80952904930000003" colorSpace="custom" customColorSpace="sRGB"/>
@@ -162,20 +183,24 @@
                                 <segue destination="DFM-aC-tsR" kind="show" id="iTQ-cm-kzM"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="plus.circle" catalog="system" id="Xfd-a2-XFZ"/>
+                        <barButtonItem key="rightBarButtonItem" image="plus.circle" catalog="system" id="Xfd-a2-XFZ">
+                            <connections>
+                                <action selector="plusToDo:" destination="KcO-aX-1zO" id="WHM-JV-D1h"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="blueButton" destination="cxI-rt-W4U" id="9O6-4V-XSM"/>
-                        <outlet property="deliteButton" destination="V9W-wg-vqh" id="Q3W-8b-OJQ"/>
-                        <outlet property="greenButton" destination="2tj-QY-tlg" id="wRt-fd-QvS"/>
-                        <outlet property="orangeButton" destination="cgp-s3-kN0" id="opI-9G-BGX"/>
-                        <outlet property="plusButton" destination="vHe-EB-Kgy" id="365-Qd-0Kw"/>
-                        <outlet property="plusTodoView" destination="MYa-rP-Tee" id="lkY-bK-mZE"/>
-                        <outlet property="timeTextFiled" destination="W9a-s6-odY" id="XlM-Ok-fEm"/>
-                        <outlet property="todoTableView" destination="Nxx-tX-SA8" id="vYX-5x-mxR"/>
-                        <outlet property="todoTextField" destination="lVf-xv-h1D" id="fUI-6M-QxP"/>
-                        <outlet property="whiteButton" destination="Cph-iJ-qd4" id="DZN-04-sBz"/>
-                        <outlet property="yellowButton" destination="IVa-zv-W6j" id="f5o-Pc-4jX"/>
+                        <outlet property="blueButton" destination="Cph-iJ-qd4" id="gKf-Ce-IlL"/>
+                        <outlet property="deliteButton" destination="V9W-wg-vqh" id="9Hl-fL-QIJ"/>
+                        <outlet property="greenButton" destination="2tj-QY-tlg" id="Zuh-U5-POD"/>
+                        <outlet property="orangeButton" destination="cgp-s3-kN0" id="zeX-xk-lEf"/>
+                        <outlet property="plusButton" destination="vHe-EB-Kgy" id="hT3-LZ-7ll"/>
+                        <outlet property="plusTodoView" destination="MYa-rP-Tee" id="acB-Wx-XaQ"/>
+                        <outlet property="timeTextFiled" destination="W9a-s6-odY" id="epp-tx-fQC"/>
+                        <outlet property="todoTableView" destination="Nxx-tX-SA8" id="Vao-nL-FQq"/>
+                        <outlet property="todoTextField" destination="lVf-xv-h1D" id="h6f-rb-djJ"/>
+                        <outlet property="whiteButton" destination="cxI-rt-W4U" id="dIC-ga-9RP"/>
+                        <outlet property="yellowButton" destination="IVa-zv-W6j" id="c6m-8s-CKT"/>
                         <segue destination="bvg-BS-dNl" kind="show" identifier="memo" id="wbL-4R-Xg7"/>
                         <segue destination="uvn-91-FFt" kind="show" identifier="weather" id="Fk3-N5-ImI"/>
                     </connections>

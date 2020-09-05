@@ -56,6 +56,7 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
     var MinTemp:Double = 0
     var weatherId:Int = 0
     
+    var dateText:String = ""
     var timeText:String = ""
     var timeTextA:String = ""
     var timeTextB:String = ""
@@ -98,127 +99,130 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
             locationManager.startUpdatingLocation()
         }
   
+        
+        
+             
+         areaTextLabel.text = areaString
+         timeMainTextLabel.text = dateText
+        
+        
+        temprutureLabel.text = "\(tempureture)℃"
+        MaxTempLabel.text = "\(MaxTemp)℃"
+        MinTempLabel.text = "\(MinTemp)℃"
+        
+         
+         weatherIconLabel.text = weatherIconChange(weatherId: weatherId)
+         timeTextLabel.text = timeText
+         tempTextLabel.text = "\(tempureture)℃"
+
+         weatherIconLabelA.text = weatherIconChange(weatherId: weatherIdA)
+         timeTextLabelA.text = timeTextA
+         tempTextLabelA.text = "\(tempA)℃"
+
+         weatherIconLabelB.text = weatherIconChange(weatherId: weatherIdB)
+         timeTextLabelB.text = timeTextB
+         tempTextLabelB.text = "\(tempB)℃"
+
+         weatherIconLabelC.text = weatherIconChange(weatherId:weatherIdC)
+         timeTextLabelC.text = timeTextC
+         tempTextLabelC.text = "\(tempC)℃"
+
+         weatherIconLabelD.text = weatherIconChange(weatherId: weatherIdD)
+         timeTextLabelD.text = timeTextD
+         tempTextLabelD.text = "\(tempD)℃"
+
+         weatherIconLabelE.text = weatherIconChange(weatherId: weatherIdE)
+         timeTextLabelE.text = timeTextE
+         tempTextLabelE.text = "\(tempE)℃"
+
+         weatherIconLabelF.text = weatherIconChange(weatherId: weatherIdF)
+         timeTextLabelF.text = timeTextF
+         tempTextLabelF.text = "\(tempF)℃"
+
+         weatherIconLabelG.text = weatherIconChange(weatherId: weatherIdG)
+         timeTextLabelG.text = timeTextG
+         tempTextLabelG.text = "\(tempG)℃"
+         
+         
+         
+         
+         switch weatherId{
+         //             雷
+                     case 200..<300:
+                         view.backgroundColor = .systemYellow
+                         animationString = "ThunderIcon"
+                         weatherIconView.backgroundColor = .systemYellow
+                         baceView.backgroundColor = .systemYellow
+                         IconScrollView.backgroundColor = .systemYellow
+                         
+         //                曇り
+                     case 300..<400:
+                         view.backgroundColor = .lightGray
+                         animationString = "CloudIcon"
+                         weatherIconView.backgroundColor = .lightGray
+                         baceView.backgroundColor = .lightGray
+                         IconScrollView.backgroundColor = .lightGray
+                         
+         //                雨
+                     case 500..<600:
+                         view.backgroundColor = .systemBlue
+                         animationString = "RainIcon"
+                         weatherIconView.backgroundColor = .systemBlue
+                         baceView.backgroundColor = .systemBlue
+                         IconScrollView.backgroundColor = .systemBlue
+                         
+         //                雪
+                      case 600..<700:
+                         view.backgroundColor = .white
+                         animationString = "snowIcon"
+                         weatherIconView.backgroundColor = .white
+                         baceView.backgroundColor = .white
+                         IconScrollView.backgroundColor = .white
+                        
+         //                風
+                      case 700..<800:
+                         view.backgroundColor = .lightGray
+                         animationString = "windyIcon"
+                         weatherIconView.backgroundColor = .lightGray
+                         baceView.backgroundColor = .lightGray
+                         IconScrollView.backgroundColor = .lightGray
+                         
+                         
+         //                曇り
+                     case 800:
+                         view.backgroundColor = .lightGray
+                         animationString = "SunnyIcon"
+                         weatherIconView.backgroundColor = .lightGray
+                         baceView.backgroundColor = .lightGray
+                         IconScrollView.backgroundColor = .lightGray
+                         
+         //                曇り
+                     case 801..<900:
+                         view.backgroundColor = .lightGray
+                         animationString = "CloudIcon"
+                         weatherIconView.backgroundColor = .lightGray
+                         baceView.backgroundColor = .lightGray
+                         IconScrollView.backgroundColor = .lightGray
+                         
+         //                曇り
+                     default:
+                         view.backgroundColor = .lightGray
+                         animationString = "CloudIcon"
+                         weatherIconView.backgroundColor = .lightGray
+                         baceView.backgroundColor = .lightGray
+                         IconScrollView.backgroundColor = .lightGray
+                     }
+         
+             
+         
+         animationIcon()
+         
+         let contentWidth = baceView.bounds.width*2
+         let contentHeight = baceView.bounds.height
+         IconScrollView.contentSize = CGSize(width: contentWidth, height: contentHeight)
        
-            
-        print(areaString)
-        print(lat)
-        print(lon)
-            
-        areaTextLabel.text = "11111"
-        timeMainTextLabel.text = "00000"
-        
-        weatherIconLabel.text = weatherIconChange(weatherId: weatherId)
-        timeTextLabel.text = timeText
-        tempTextLabel.text = "\(tempureture)℃"
-
-        weatherIconLabelA.text = weatherIconChange(weatherId: weatherIdA)
-        timeTextLabelA.text = timeTextA
-        tempTextLabelA.text = "\(tempA)℃"
-
-        weatherIconLabelB.text = weatherIconChange(weatherId: weatherIdB)
-        timeTextLabelB.text = timeTextB
-        tempTextLabelB.text = "\(tempB)℃"
-
-        weatherIconLabelC.text = weatherIconChange(weatherId:weatherIdC)
-        timeTextLabelC.text = timeTextC
-        tempTextLabelC.text = "\(tempC)℃"
-
-        weatherIconLabelD.text = weatherIconChange(weatherId: weatherIdD)
-        timeTextLabelD.text = timeTextD
-        tempTextLabelD.text = "\(tempD)℃"
-
-        weatherIconLabelE.text = weatherIconChange(weatherId: weatherIdE)
-        timeTextLabelE.text = timeTextE
-        tempTextLabelE.text = "\(tempE)℃"
-
-        weatherIconLabelF.text = weatherIconChange(weatherId: weatherIdF)
-        timeTextLabelF.text = timeTextF
-        tempTextLabelF.text = "\(tempF)℃"
-
-        weatherIconLabelG.text = weatherIconChange(weatherId: weatherIdG)
-        timeTextLabelG.text = timeTextG
-        tempTextLabelG.text = "\(tempG)℃"
-        
-        
-        
-        
-        switch weatherId{
-        //             雷
-                    case 200..<300:
-                        view.backgroundColor = .systemYellow
-                        animationString = "ThunderIcon"
-                        weatherIconView.backgroundColor = .systemYellow
-                        baceView.backgroundColor = .systemYellow
-                        IconScrollView.backgroundColor = .systemYellow
-                        
-        //                曇り
-                    case 300..<400:
-                        view.backgroundColor = .lightGray
-                        animationString = "CloudIcon"
-                        weatherIconView.backgroundColor = .lightGray
-                        baceView.backgroundColor = .lightGray
-                        IconScrollView.backgroundColor = .lightGray
-                        
-        //                雨
-                    case 500..<600:
-                        view.backgroundColor = .systemBlue
-                        animationString = "RainIcon"
-                        weatherIconView.backgroundColor = .systemBlue
-                        baceView.backgroundColor = .systemBlue
-                        IconScrollView.backgroundColor = .systemBlue
-                        
-        //                雪
-                     case 600..<700:
-                        view.backgroundColor = .white
-                        animationString = "snowIcon"
-                        weatherIconView.backgroundColor = .white
-                        baceView.backgroundColor = .white
-                        IconScrollView.backgroundColor = .white
-                       
-        //                風
-                     case 700..<800:
-                        view.backgroundColor = .lightGray
-                        animationString = "windyIcon"
-                        weatherIconView.backgroundColor = .lightGray
-                        baceView.backgroundColor = .lightGray
-                        IconScrollView.backgroundColor = .lightGray
-                        
-                        
-        //                曇り
-                    case 800:
-                        view.backgroundColor = .lightGray
-                        animationString = "SunnyIcon"
-                        weatherIconView.backgroundColor = .lightGray
-                        baceView.backgroundColor = .lightGray
-                        IconScrollView.backgroundColor = .lightGray
-                        
-        //                曇り
-                    case 801..<900:
-                        view.backgroundColor = .lightGray
-                        animationString = "CloudIcon"
-                        weatherIconView.backgroundColor = .lightGray
-                        baceView.backgroundColor = .lightGray
-                        IconScrollView.backgroundColor = .lightGray
-                        
-        //                曇り
-                    default:
-                        view.backgroundColor = .lightGray
-                        animationString = "CloudIcon"
-                        weatherIconView.backgroundColor = .lightGray
-                        baceView.backgroundColor = .lightGray
-                        IconScrollView.backgroundColor = .lightGray
-                    }
-        
-            
-        
-        animationIcon()
-        
-        let contentWidth = baceView.bounds.width*2
-        let contentHeight = baceView.bounds.height
-        IconScrollView.contentSize = CGSize(width: contentWidth, height: contentHeight)
-        
     }
-    
+ 
     
     func animationIcon(){
           
@@ -259,7 +263,7 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
                         case .success:
 
                         let json:JSON = JSON(responce.data as Any)
-//                        print(json)
+                    
                         self.weatherIcon = json["list"][0]["weather"][0]["main"].string!
                         let tempureture1 = json["list"][0]["main"]["temp"].double
                         let MaxTemp1 = json["list"][0]["main"]["temp_max"].double
@@ -267,30 +271,44 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
                         self.areaString  = json["city"]["name"].string!
                         self.weatherId = json["list"][0]["weather"][0]["id"].int!
 
-                        self.weatherIdA = json["list"][1]["weather"][0]["id"].int!
-                        self.weatherIdB = json["list"][2]["weather"][0]["id"].int!
-                        self.weatherIdC = json["list"][3]["weather"][0]["id"].int!
-                        self.weatherIdD = json["list"][4]["weather"][0]["id"].int!
-                        self.weatherIdE = json["list"][5]["weather"][0]["id"].int!
-                        self.weatherIdF = json["list"][6]["weather"][0]["id"].int!
-                        self.weatherIdG = json["list"][7]["weather"][0]["id"].int!
+                        self.weatherIdA = json["list"][0]["weather"][0]["id"].int!
+                        self.weatherIdB = json["list"][1]["weather"][0]["id"].int!
+                        self.weatherIdC = json["list"][2]["weather"][0]["id"].int!
+                        self.weatherIdD = json["list"][3]["weather"][0]["id"].int!
+                        self.weatherIdE = json["list"][4]["weather"][0]["id"].int!
+                        self.weatherIdF = json["list"][5]["weather"][0]["id"].int!
+                        self.weatherIdG = json["list"][6]["weather"][0]["id"].int!
                         
-                        self.timeText = json["list"][0]["dt_txt"].string!
-                        self.timeTextA = json["list"][1]["dt_txt"].string!
-                        self.timeTextB = json["list"][2]["dt_txt"].string!
-                        self.timeTextC = json["list"][3]["dt_txt"].string!
-                        self.timeTextD = json["list"][4]["dt_txt"].string!
-                        self.timeTextE = json["list"][5]["dt_txt"].string!
-                        self.timeTextF = json["list"][6]["dt_txt"].string!
-                        self.timeTextG = json["list"][7]["dt_txt"].string!
                         
-                        let tempuretureA = json["list"][1]["main"]["temp"].double
-                        let tempuretureB = json["list"][2]["main"]["temp"].double
-                        let tempuretureC = json["list"][3]["main"]["temp"].double
-                        let tempuretureD = json["list"][4]["main"]["temp"].double
-                        let tempuretureE = json["list"][5]["main"]["temp"].double
-                        let tempuretureF = json["list"][6]["main"]["temp"].double
-                        let tempuretureG = json["list"][7]["main"]["temp"].double
+                        let timeString = json["list"][0]["dt_txt"].string!
+                        let timeStringA = json["list"][1]["dt_txt"].string!
+                        let timeStringB = json["list"][2]["dt_txt"].string!
+                        let timeStringC = json["list"][3]["dt_txt"].string!
+                        let timeStringD = json["list"][4]["dt_txt"].string!
+                        let timeStringE = json["list"][5]["dt_txt"].string!
+                        let timeStringF = json["list"][6]["dt_txt"].string!
+                        let timeStringG = json["list"][7]["dt_txt"].string!
+                        
+                        
+                        
+                        
+                        self.dateText = self.dateTextChange(time: timeString)
+                        self.timeText = self.timeTextChange(time: timeString)
+                        self.timeTextA = self.timeTextChange(time: timeStringA)
+                        self.timeTextB = self.timeTextChange(time: timeStringB)
+                        self.timeTextC = self.timeTextChange(time: timeStringC)
+                        self.timeTextD = self.timeTextChange(time: timeStringD)
+                        self.timeTextE = self.timeTextChange(time: timeStringE)
+                        self.timeTextF = self.timeTextChange(time: timeStringF)
+                        self.timeTextG = self.timeTextChange(time: timeStringG)
+                        
+                        let tempuretureA = json["list"][0]["main"]["temp"].double
+                        let tempuretureB = json["list"][1]["main"]["temp"].double
+                        let tempuretureC = json["list"][2]["main"]["temp"].double
+                        let tempuretureD = json["list"][3]["main"]["temp"].double
+                        let tempuretureE = json["list"][4]["main"]["temp"].double
+                        let tempuretureF = json["list"][5]["main"]["temp"].double
+                        let tempuretureG = json["list"][6]["main"]["temp"].double
 
                         let tempNumRound = self.tempChange(temp:tempureture1!)
                         let MaxTempRoud = self.tempChange(temp: MaxTemp1!)
@@ -315,6 +333,8 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
                         self.tempE = tempNumRoundE
                         self.tempF = tempNumRoundF
                         self.tempG = tempNumRoundG
+                            
+                        self.viewDidLoad()
                             
                        case.failure:
                         break
@@ -344,21 +364,80 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
             return weatherIcon
         }
     
+    
+        
+        
     func timeTextChange(time:String)->String{
-        
-        let timeStr:String = String(time[time.index(time.startIndex, offsetBy: 11)..<time.index(time.startIndex, offsetBy: 13)])
-        let timeString:String = "\(timeStr)時"
-        return timeString
-        
-    }
-        
-        func tempChange(temp:Double)->Double{
+             
+          let timeStr:String = String(time[time.index(time.startIndex, offsetBy: 11)..<time.index(time.startIndex, offsetBy: 13)])
+          var timeString2:String = ""
+          switch timeStr{
+          case "03": timeString2 = "3"
+          case "06": timeString2 = "6"
+          case "09": timeString2 = "9"
+          case "12": timeString2 = "12"
+          case "15": timeString2 = "15"
+          case "18": timeString2 = "18"
+          case "21": timeString2 = "21"
+          case "00": timeString2 = "0"
+          default: break
+          }
+          
             
-            let tempRound:Double = round(temp*10)/10
-            return tempRound
-      
-        }
-        
+             let timeString:String = "\(timeString2)時"
+          
+          
+             return timeString
+             
+         }
+             
+             func tempChange(temp:Double)->Double{
+                 
+                 let tempRound:Double = round(temp*10)/10
+                 return tempRound
+           
+             }
+             
+      func dateTextChange(time:String)->String{
+                
+          let dateString1:String = String(time[time.index(time.startIndex, offsetBy: 5)..<time.index(time.startIndex, offsetBy: 7)])
+          let dateString2:String = String(time[time.index(time.startIndex, offsetBy: 8)..<time.index(time.startIndex, offsetBy: 10)])
+          
+          var dateString3:String = ""
+          
+          switch dateString1 {
+          case "01": dateString3 = "1"
+          case "02": dateString3 = "2"
+          case "03": dateString3 = "3"
+          case "04": dateString3 = "4"
+          case "05": dateString3 = "5"
+          case "06": dateString3 = "6"
+          case "07": dateString3 = "7"
+          case "08": dateString3 = "8"
+          case "09": dateString3 = "9"
+          default: dateString3 = dateString1
+          }
+          
+          var dateString4:String = ""
+          
+          switch dateString2 {
+          case "01": dateString4 = "1"
+          case "02": dateString4 = "2"
+          case "03": dateString4 = "3"
+          case "04": dateString4 = "4"
+          case "05": dateString4 = "5"
+          case "06": dateString4 = "6"
+          case "07": dateString4 = "7"
+          case "08": dateString4 = "8"
+          case "09": dateString4 = "9"
+          default: dateString4 = dateString2
+          }
+          
+          let dateString:String = "\(dateString3)月\(dateString4)日"
+          return dateString
+                
+            }
+
 
     
     /*
