@@ -24,16 +24,15 @@
                                 <rect key="frame" x="0.0" y="641" width="414" height="255"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="todoを入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lVf-xv-h1D">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="todoを入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lVf-xv-h1D">
                                         <rect key="frame" x="43" y="90" width="242" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="時間を入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W9a-s6-odY" customClass="DatePickerKeyboard" customModule="todoEverydayApp12" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="時間を入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W9a-s6-odY" customClass="DatePickerKeyboard" customModule="todoEverydayApp12" customModuleProvider="target">
                                         <rect key="frame" x="43" y="33" width="100" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="aME-U2-2b1"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -55,46 +54,42 @@
                                             <action selector="ToDoInput:" destination="KcO-aX-1zO" eventType="touchUpInside" id="DaX-n3-uEV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cph-iJ-qd4">
-                                        <rect key="frame" x="93" y="159" width="30" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cph-iJ-qd4">
+                                        <rect key="frame" x="100" y="159" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.35294117650000001" green="1" blue="1" alpha="0.79635233270000005" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="blueButtonTap:" destination="KcO-aX-1zO" eventType="touchUpInside" id="i8Z-Ej-p0D"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVa-zv-W6j">
-                                        <rect key="frame" x="148" y="159" width="33" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVa-zv-W6j">
+                                        <rect key="frame" x="159" y="159" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.85882352939999995" blue="0.33333333329999998" alpha="0.79825044010000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="33" id="aKz-3b-fpg"/>
-                                        </constraints>
                                         <connections>
                                             <action selector="yellowButtonTap:" destination="KcO-aX-1zO" eventType="touchUpInside" id="v55-VP-KMq"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgp-s3-kN0">
-                                        <rect key="frame" x="204" y="159" width="30" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgp-s3-kN0">
+                                        <rect key="frame" x="222" y="159" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.88235294119999996" alpha="0.79723261440000004" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="orangeButtonTap:" destination="KcO-aX-1zO" eventType="touchUpInside" id="7ZL-gC-Xrp"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tj-QY-tlg">
-                                        <rect key="frame" x="259" y="159" width="33" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tj-QY-tlg">
+                                        <rect key="frame" x="287" y="159" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.28627450980000002" green="0.80784313730000001" blue="0.64313725489999995" alpha="0.79549955989999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="33" id="Smg-QP-eev"/>
-                                        </constraints>
                                         <connections>
                                             <action selector="greenButtonTap:" destination="KcO-aX-1zO" eventType="touchUpInside" id="7Y2-L9-PVC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxI-rt-W4U">
-                                        <rect key="frame" x="43" y="159" width="30" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxI-rt-W4U">
+                                        <rect key="frame" x="43" y="159" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="cxI-rt-W4U" secondAttribute="height" multiplier="1:1" id="Cx8-eu-rTC"/>
-                                        </constraints>
                                         <connections>
                                             <action selector="whiteButtonTap:" destination="KcO-aX-1zO" eventType="touchUpInside" id="X9P-qV-AWr"/>
                                         </connections>
@@ -119,48 +114,6 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80952904930000003" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="cxI-rt-W4U" firstAttribute="leading" secondItem="W9a-s6-odY" secondAttribute="leading" id="0AF-lU-bcA"/>
-                                    <constraint firstItem="cxI-rt-W4U" firstAttribute="baseline" secondItem="cgp-s3-kN0" secondAttribute="baseline" id="2nm-v2-mbN"/>
-                                    <constraint firstItem="2tj-QY-tlg" firstAttribute="baseline" secondItem="cgp-s3-kN0" secondAttribute="baseline" id="3Wa-l9-d8h"/>
-                                    <constraint firstItem="2tj-QY-tlg" firstAttribute="baseline" secondItem="Cph-iJ-qd4" secondAttribute="baseline" id="6oW-DN-pG0"/>
-                                    <constraint firstItem="cxI-rt-W4U" firstAttribute="top" secondItem="IVa-zv-W6j" secondAttribute="top" id="7l7-KJ-lLe"/>
-                                    <constraint firstItem="2tj-QY-tlg" firstAttribute="leading" secondItem="cgp-s3-kN0" secondAttribute="trailing" constant="25" id="Ab7-nD-dC9"/>
-                                    <constraint firstItem="2tj-QY-tlg" firstAttribute="baseline" secondItem="IVa-zv-W6j" secondAttribute="baseline" id="CsJ-JJ-W7H"/>
-                                    <constraint firstItem="IVa-zv-W6j" firstAttribute="baseline" secondItem="cxI-rt-W4U" secondAttribute="baseline" id="Dc3-Rn-lEh"/>
-                                    <constraint firstAttribute="bottom" secondItem="cxI-rt-W4U" secondAttribute="bottom" constant="66" id="Emo-Fl-ny3"/>
-                                    <constraint firstItem="cxI-rt-W4U" firstAttribute="firstBaseline" secondItem="cgp-s3-kN0" secondAttribute="firstBaseline" id="FcS-EJ-L14"/>
-                                    <constraint firstItem="cxI-rt-W4U" firstAttribute="leading" secondItem="lVf-xv-h1D" secondAttribute="leading" id="Gs8-tJ-EiG"/>
-                                    <constraint firstItem="2tj-QY-tlg" firstAttribute="baseline" secondItem="cxI-rt-W4U" secondAttribute="baseline" id="Gxa-gT-erW"/>
-                                    <constraint firstItem="2tj-QY-tlg" firstAttribute="firstBaseline" secondItem="Cph-iJ-qd4" secondAttribute="firstBaseline" id="HXx-nL-R8E"/>
-                                    <constraint firstItem="IVa-zv-W6j" firstAttribute="leading" secondItem="Cph-iJ-qd4" secondAttribute="trailing" constant="25" id="J26-ew-WNl"/>
-                                    <constraint firstItem="lVf-xv-h1D" firstAttribute="top" secondItem="W9a-s6-odY" secondAttribute="bottom" constant="23" id="Mgv-rG-T4g"/>
-                                    <constraint firstItem="IVa-zv-W6j" firstAttribute="firstBaseline" secondItem="2tj-QY-tlg" secondAttribute="firstBaseline" id="OnX-tN-aKU"/>
-                                    <constraint firstItem="IVa-zv-W6j" firstAttribute="centerX" secondItem="lVf-xv-h1D" secondAttribute="centerX" id="Rgb-Hu-B40"/>
-                                    <constraint firstItem="cxI-rt-W4U" firstAttribute="top" secondItem="2tj-QY-tlg" secondAttribute="top" id="Rkk-ZQ-anO"/>
-                                    <constraint firstItem="cxI-rt-W4U" firstAttribute="firstBaseline" secondItem="2tj-QY-tlg" secondAttribute="firstBaseline" id="Su7-ln-zg6"/>
-                                    <constraint firstItem="cxI-rt-W4U" firstAttribute="top" secondItem="cgp-s3-kN0" secondAttribute="top" id="UI0-CM-P6D"/>
-                                    <constraint firstItem="cxI-rt-W4U" firstAttribute="top" secondItem="lVf-xv-h1D" secondAttribute="bottom" constant="35" id="WCh-66-iwv"/>
-                                    <constraint firstItem="W9a-s6-odY" firstAttribute="top" secondItem="MYa-rP-Tee" secondAttribute="top" constant="33" id="Xv7-oI-OL2"/>
-                                    <constraint firstItem="2tj-QY-tlg" firstAttribute="firstBaseline" secondItem="cgp-s3-kN0" secondAttribute="firstBaseline" id="Y8A-vb-VLe"/>
-                                    <constraint firstItem="cxI-rt-W4U" firstAttribute="baseline" secondItem="2tj-QY-tlg" secondAttribute="baseline" id="bHi-aG-osB"/>
-                                    <constraint firstItem="cxI-rt-W4U" firstAttribute="leading" secondItem="MYa-rP-Tee" secondAttribute="leading" constant="43" id="bhp-Gl-eFo"/>
-                                    <constraint firstItem="2tj-QY-tlg" firstAttribute="firstBaseline" secondItem="IVa-zv-W6j" secondAttribute="firstBaseline" id="fgd-Y7-gU2"/>
-                                    <constraint firstItem="2tj-QY-tlg" firstAttribute="firstBaseline" secondItem="cxI-rt-W4U" secondAttribute="firstBaseline" id="gS6-NH-FjS"/>
-                                    <constraint firstItem="cxI-rt-W4U" firstAttribute="baseline" secondItem="IVa-zv-W6j" secondAttribute="baseline" id="i1f-C3-TUq"/>
-                                    <constraint firstItem="cxI-rt-W4U" firstAttribute="top" secondItem="Cph-iJ-qd4" secondAttribute="top" id="j0n-jc-BEN"/>
-                                    <constraint firstItem="Cph-iJ-qd4" firstAttribute="leading" secondItem="cxI-rt-W4U" secondAttribute="trailing" constant="20" id="lDO-qn-WaU"/>
-                                    <constraint firstItem="cxI-rt-W4U" firstAttribute="firstBaseline" secondItem="IVa-zv-W6j" secondAttribute="firstBaseline" id="ma8-7V-F9c"/>
-                                    <constraint firstItem="IVa-zv-W6j" firstAttribute="baseline" secondItem="cgp-s3-kN0" secondAttribute="baseline" id="qo8-h0-Kdz"/>
-                                    <constraint firstItem="cxI-rt-W4U" firstAttribute="firstBaseline" secondItem="Cph-iJ-qd4" secondAttribute="firstBaseline" id="r0A-mb-HKd"/>
-                                    <constraint firstItem="IVa-zv-W6j" firstAttribute="firstBaseline" secondItem="cgp-s3-kN0" secondAttribute="firstBaseline" id="sSk-M3-W1P"/>
-                                    <constraint firstItem="IVa-zv-W6j" firstAttribute="firstBaseline" secondItem="cxI-rt-W4U" secondAttribute="firstBaseline" id="vC4-Sg-we2"/>
-                                    <constraint firstItem="cgp-s3-kN0" firstAttribute="leading" secondItem="IVa-zv-W6j" secondAttribute="trailing" constant="23" id="vIe-80-0q8"/>
-                                    <constraint firstItem="IVa-zv-W6j" firstAttribute="baseline" secondItem="Cph-iJ-qd4" secondAttribute="baseline" id="vi4-SJ-umb"/>
-                                    <constraint firstItem="IVa-zv-W6j" firstAttribute="baseline" secondItem="2tj-QY-tlg" secondAttribute="baseline" id="vmy-Ye-Fg9"/>
-                                    <constraint firstItem="IVa-zv-W6j" firstAttribute="firstBaseline" secondItem="Cph-iJ-qd4" secondAttribute="firstBaseline" id="whA-fs-Ekq"/>
-                                    <constraint firstItem="cxI-rt-W4U" firstAttribute="baseline" secondItem="Cph-iJ-qd4" secondAttribute="baseline" id="yEq-u5-XSA"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
