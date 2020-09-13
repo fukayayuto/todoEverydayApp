@@ -21,6 +21,7 @@ class TimePickerKeyboard: UITextField {
         super.init(frame: frame)
         commoninit()
     }
+    
     private func commoninit() {
         // datePickerの設定
         datePicker = UIDatePicker()
