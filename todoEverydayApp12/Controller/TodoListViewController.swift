@@ -36,8 +36,11 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
     
      var DataArray :[TodoData] = []
     
-    let actionButton = JJFloatingActionButton()
+     var TimeArray = [String]()
     
+     let actionButton = JJFloatingActionButton()
+    
+     let ud = UserDefaults.standard
      
 
      override func viewDidLoad() {
@@ -73,6 +76,8 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
 //        timeData3.string = todoTextArray[2]
 //        timeData3.Int = colorNumberArray[2]
 //        DataArray.append(timeData3)
+        
+        
         
         configureObserver()
         dataChange()
@@ -152,6 +157,12 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
 //          self.view.endEditing(true)
 //       }
 //
+    
+    func loadTodo(){
+              if ud.array(forKey: "todoArray") != nil{
+                  DataArray = ud.array(forKey: "todoArray") as![String]
+              }
+          }
    
     
     func showAnimation() {

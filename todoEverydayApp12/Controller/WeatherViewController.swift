@@ -85,7 +85,7 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
     var lat = 26.8205
     var lon = 30.8024
     
-    var animationString:String = "RainIcon"
+    var animationString:String = ""
     
     let locationManager = CLLocationManager()
     
@@ -214,8 +214,8 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
                      }
          
              
-         
-         animationIcon()
+        
+         animationIcon(animationString: animationString)
          
          let contentWidth = baceView.bounds.width*2
          let contentHeight = baceView.bounds.height
@@ -224,7 +224,7 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
     }
  
     
-    func animationIcon(){
+    func animationIcon(animationString:String){
           
           let animationView = AnimationView(name: "\(animationString)")
           animationView.frame = weatherIconView.bounds
