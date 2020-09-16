@@ -9,9 +9,14 @@
 import Foundation
 import UIKit
 
-class TimePickerKeyboard: UITextField {
+//protocol NotificationDelegate{
+//    func loadOK()
+//}
 
+class TimePickerKeyboard: UITextField{
+   
     private var datePicker: UIDatePicker!
+ 
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -58,6 +63,8 @@ class TimePickerKeyboard: UITextField {
     // キーボードの完了ボタンタップ時に呼ばれる
     @objc private func donePicker() {
         resignFirstResponder()
+        let notificationVC = NotificationViewController()
+        notificationVC.load()
     }
    
     @objc private func nowTimePicker() {
@@ -88,5 +95,6 @@ class TimePickerKeyboard: UITextField {
         return CGRect(x: 0, y: 0, width: 0, height: 0)
     }
 
+    
 }
 

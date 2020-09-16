@@ -25,38 +25,20 @@ class ConfigurationViewController: UITableViewController {
         super.viewDidLoad()
         cell2.textLabel?.text = "通知機能"
         
-        if ud.object(forKey: "switch") != nil{
-            count = ud.object(forKey: "switch") as! Int
-        }
-        
-        if count == 0{
-            switchButton.isOn = true
-        }else if count == 1{
-            switchButton.isOn = false
-        }
+      
     }
   
-    @IBAction func switchChange(_ sender: UISwitch) {
-        
-        if ( sender.isOn ) {
-                  print("ON")
-                  OnAction()
-                  ud.removeObject(forKey:"switch")
-               } else {
-                   print("OFF")
-                   count = 1
-                   ud.set(count, forKey: "switch")
-               }
-    }
-    
+   
     func OnAction(){
         
         let content = UNMutableNotificationContent()
         var notificationTime = DateComponents()
 
         // トリガー設定
-        notificationTime.hour = 9
-        notificationTime.minute = 0
+        let hour:Int = 9
+        let minute:Int = 00
+        notificationTime.hour = hour
+        notificationTime.minute = minute
         let trigger = UNCalendarNotificationTrigger(dateMatching: notificationTime, repeats: false)
         
         content.title = ""
@@ -115,6 +97,9 @@ class ConfigurationViewController: UITableViewController {
             performSegue(withIdentifier: "moji2", sender: nil)
             print("moji2")
             
+        }else if indexPath.section == 1 && indexPath.row == 0{
+            print("111")
+            performSegue(withIdentifier: "tuuchi", sender: nil)
         }
         
     }

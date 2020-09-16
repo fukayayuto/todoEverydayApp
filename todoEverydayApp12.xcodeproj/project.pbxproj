@@ -20,6 +20,7 @@
 		5A7366F124F9EA2300FE2B85 /* windyIcon.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A7366E824F9EA2300FE2B85 /* windyIcon.json */; };
 		5A73671B24FA20A000FE2B85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A73671A24FA20A000FE2B85 /* GoogleService-Info.plist */; };
 		5AB07E4424F9DA3B0084C70C /* memoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB07E4324F9DA3B0084C70C /* memoViewController.swift */; };
+		5AEB85A325123422004E952E /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEB85A225123421004E952E /* NotificationViewController.swift */; };
 		5AFB7CF724EF28F600A56F42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7CF624EF28F600A56F42 /* AppDelegate.swift */; };
 		5AFB7CF924EF28F600A56F42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB7CF824EF28F600A56F42 /* SceneDelegate.swift */; };
 		5AFB7CFE24EF28F600A56F42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB7CFC24EF28F600A56F42 /* Main.storyboard */; };
@@ -72,6 +73,7 @@
 		5A7366E824F9EA2300FE2B85 /* windyIcon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = windyIcon.json; sourceTree = "<group>"; };
 		5A73671A24FA20A000FE2B85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5AB07E4324F9DA3B0084C70C /* memoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memoViewController.swift; sourceTree = "<group>"; };
+		5AEB85A225123421004E952E /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		5AFB7CF324EF28F600A56F42 /* todoEverydayApp12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todoEverydayApp12.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AFB7CF624EF28F600A56F42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AFB7CF824EF28F600A56F42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -194,9 +196,9 @@
 				5AFB7D3B24EF2D0800A56F42 /* NewsData.swift */,
 				5AFB7D4124EF2D5B00A56F42 /* ToDoCell.swift */,
 				5AFB7D3524EF2CAF00A56F42 /* Weather.swift */,
-				5AFB7D3D24EF2D2100A56F42 /* TodoData.swift */,
 				5AFB7D3724EF2CEF00A56F42 /* WeatherCell.swift */,
 				5AFB7D3924EF2CFD00A56F42 /* NewsCell.swift */,
+				5AFB7D3D24EF2D2100A56F42 /* TodoData.swift */,
 				5AFB7D3F24EF2D4500A56F42 /* SelectNewsCell.swift */,
 				5AFB7D4324EF2EB500A56F42 /* DatePicker.swift */,
 			);
@@ -237,6 +239,7 @@
 				5AFB7D1B24EF2BFB00A56F42 /* MojiChange2ViewController.swift */,
 				5AFB7D1D24EF2C0300A56F42 /* SelectNewsViewController.swift */,
 				5AFB7D4B24EF35EC00A56F42 /* TodoInputView.swift */,
+				5AEB85A225123421004E952E /* NotificationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 			files = (
 				5AFB7D1C24EF2BFB00A56F42 /* MojiChange2ViewController.swift in Sources */,
 				5AFB7D2924EF2C4B00A56F42 /* News6ViewController.swift in Sources */,
+				5AEB85A325123422004E952E /* NotificationViewController.swift in Sources */,
 				5AFB7D1024EF2BB100A56F42 /* TimePicker.swift in Sources */,
 				5AFB7D1224EF2BC900A56F42 /* AddMemoViewController.swift in Sources */,
 				5AFB7D2C24EF2C4B00A56F42 /* News4ViewController.swift in Sources */,
