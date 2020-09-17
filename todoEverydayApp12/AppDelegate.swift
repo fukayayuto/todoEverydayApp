@@ -8,6 +8,7 @@
 
 import UIKit
 import UserNotifications
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate{
@@ -23,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
                       UNUserNotificationCenter.current().delegate = self
                   }
               }
+        
+        FirebaseApp.configure()
         return true
     }
 

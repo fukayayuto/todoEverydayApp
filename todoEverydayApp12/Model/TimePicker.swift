@@ -63,8 +63,6 @@ class TimePickerKeyboard: UITextField{
     // キーボードの完了ボタンタップ時に呼ばれる
     @objc private func donePicker() {
         resignFirstResponder()
-        let notificationVC = NotificationViewController()
-        notificationVC.load()
     }
    
     @objc private func nowTimePicker() {

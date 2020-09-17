@@ -9,6 +9,7 @@
 import UIKit
 import Lottie
 import JJFloatingActionButton
+import FirebaseDatabase
 
 class TodoListViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,UIGestureRecognizerDelegate{
 
@@ -72,6 +73,8 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
         timeData2.string = todoTextArray[1]
         timeData2.Int = colorNumberArray[1]
         DataArray.append(timeData2)
+        
+        fetchData()
         
 //        let timeData3 = Data()
 //        let timeDate3 = dateFromString(string:todoTimeArray[2])
@@ -417,6 +420,7 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
         todoTimeArray.append(todoTime)
         colorNumberArray.append(colorNumber)
         
+        DataInput(todoText: todoText, todoTime: todoTime, colorNumberCount: colorNumberCount)
             
         let timeData4 = TodoData()
         let timeDate4 = dateFromString(string:todoTimeArray[todotimeCount])
@@ -424,7 +428,7 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
         timeData4.string = todoTextArray[todotextCount]
         timeData4.Int = colorNumberArray[colorNumberCount]
         DataArray.append(timeData4)
-        ud.set(DataArray, forKey: "todo")
+//        ud.set(DataArray, forKey: "todo")
             
         dataChange()
        
@@ -541,6 +545,57 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
        
    }
     
+    func fetchData(){
+        
+        let fetchDataRef = Database.database().reference().child("todoData")
+        
+        fetchDataRef.observeSingleEvent(of: .value, with: {(snapshot) in
+                   
+                   let snapShopData = snapshot.value as AnyObject
+                   print(snapshot)
+                   let todo = snapShopData.value(forKey: "todo") as! String
+                   let time = snapShopData.value(forKey: "time") as! String
+                   let colorNumberCount = snapShopData.value(forKey: "colorCount") as! Int
+                   let todoCount:Int = self.todoTimeArray.count
+                
+                   self.todoTextArray.append(todo)
+                   self.todoTimeArray.append(time)
+                   self.colorNumberArray.append(colorNumberCount)
+                   
+                   let todoData = TodoData()
+                   let timeDate = self.dateFromString(string:self.todoTimeArray[todoCount])
+                   todoData.date = timeDate
+                   todoData.string = self.todoTextArray[todoCount]
+                   todoData.Int = self.colorNumberArray[todoCount]
+                   self.DataArray.append(todoData)
+                   print("データ入手成功")
+        
+        }
+    
+    }
+    
+    
+    func DataInput(todoText:String,todoTime:String,colorNumberCount:Int){
+        
+        let docData = [
+            "todo":todoText,
+            "time":todoTime,
+            "colorCount":colorNumberCount
+            ] as [String:Any]
+        
+        let todoDB = Database.database().reference().child("todoData")
+        
+        todoDB.childByAutoId().setValue(docData) { (error, result) in
+        
+             if error != nil{
+                print("情報の取得に失敗しました。\(error)")
+                return
+            }
+            print("情報の取得に成功しました")
+            
+        }
+        
+    }
     
     
     /*

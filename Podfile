@@ -12,5 +12,8 @@ target 'todoEverydayApp12' do
   pod ‘SwiftyJSON’
   pod 'lottie-ios'
   pod 'JJFloatingActionButton'
+  pod 'Firebase'
+  pod 'Firebase/Database'
+   
 
 end
