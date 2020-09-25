@@ -29,17 +29,15 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
     @IBOutlet weak var plusButton: UIButton!
        
      var todoTextArray:[String] = ["長押しで消去","右上の＋ボタンよりToDo入力"]
-     
      var todoTimeArray:[String] = ["8/2 10:00","8/2 8:00"]
-     
      var colorNumberArray:[Int] = [0,0]
      var colorNumber:Int = 0
     
-     var DataArray :[TodoData] = []
+    var todoArray :[TodoData] = []
     
-//     var todoArray = [String]()
-//     var TimeArray = [Date]()
-//     var colorArray = [Int]()
+     var todoStringArray = [String]()
+     var TimeArray = [Date]()
+     var colorArray = [Int]()
     
      let actionButton = JJFloatingActionButton()
     
@@ -62,19 +60,29 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
         
         let timeData1 = TodoData()
         let timeDate1 = dateFromString(string:todoTimeArray[0])
-        timeData1.date = timeDate1
-        timeData1.string = todoTextArray[0]
-        timeData1.Int = colorNumberArray[0]
-        DataArray.append(timeData1)
+        timeData1.todoDate = timeDate1
+        timeData1.todoString = todoTextArray[0]
+        timeData1.colornumber = colorNumberArray[0]
+        todoArray.append(timeData1)
         
         let timeData2 = TodoData()
         let timeDate2 = dateFromString(string:todoTimeArray[1])
-        timeData2.date = timeDate2
-        timeData2.string = todoTextArray[1]
-        timeData2.Int = colorNumberArray[1]
-        DataArray.append(timeData2)
+        timeData2.todoDate = timeDate2
+        timeData2.todoString = todoTextArray[1]
+        timeData2.colornumber = colorNumberArray[1]
+        todoArray.append(timeData2)
         
-        fetchData()
+//        fetchData()
+        
+        if let storedData = UserDefaults().data(forKey: "todoList") {
+                   do {
+                       let unarchivedData = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(storedData)
+                       todoArray.append(contentsOf: unarchivedData as! [TodoData])
+                   } catch {
+                       print(error)
+                   }
+               }
+//
         
 //        let timeData3 = Data()
 //        let timeDate3 = dateFromString(string:todoTimeArray[2])
@@ -87,6 +95,8 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
         
         configureObserver()
         dataChange()
+        
+        
         
 //        let toolbar = UIToolbar(frame: CGRectMake(0, 0, 0, 35))
 //        let space = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: self, action: nil)
@@ -135,8 +145,11 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
         item3.titleLabel.text = "メモ     "
         item3.imageView.image = UIImage(named: "memoIcon")
         item3.imageSize = CGSize(width: 90, height: 90)
-        item3.action = { item in
+        item3.action = { [self] item in
          self.performSegue(withIdentifier: "memo", sender: nil)
+            
+       
+            
         }
         
         
@@ -145,8 +158,6 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
         actionButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16).isActive = true
         actionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16).isActive = true
         
-        
-
             }
 
         
@@ -163,17 +174,7 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
 //          self.view.endEditing(true)
 //       }
 //
-    
-    
-    func loadTodo(){
-        var dataArray = [TodoData]()
-        
-        if ud.array(forKey:"todo") != nil{
-            dataArray = ud.array(forKey: "todo") as! [TodoData]
-            DataArray.removeAll()
-            DataArray = dataArray
-        }
-    }
+  
     
     func showAnimation() {
            
@@ -250,16 +251,16 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
     
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return todoTimeArray.count
+            return todoArray.count
            }
            
          func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
                  let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell") as! ToDoCell
-                 let data1 : String = self.stringFromDate(date: DataArray[indexPath.row].date)
-                 let text1 : String = DataArray[indexPath.row].string
-                 let colorNumber :Int = DataArray[indexPath.row].Int
-                 
+                 let data1 : String = self.stringFromDate(date: todoArray[indexPath.row].todoDate)
+                 let text1 : String = todoArray[indexPath.row].todoString
+                 let colorNumber :Int = todoArray[indexPath.row].colornumber
+                 print(todoArray[indexPath.row].todoString as Any)
                  cell.ToDoTextLabel.text = text1
                  cell.ToDoTimeLabel.text = data1
                  cell.selectionStyle = .none
@@ -399,6 +400,7 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
         actionButton.isHidden = true
         timeTextFiled.text = ""
         todoTextField.text = ""
+
         
     }
     
@@ -409,29 +411,27 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
         
         var todoText:String = ""
         var todoTime:String = ""
-        let todotimeCount:Int = todoTimeArray.count
-        let todotextCount:Int = todoTimeArray.count
-        let colorNumberCount:Int = colorNumberArray.count
-        
         todoTime = timeTextFiled.text!
         todoText = todoTextField.text!
         
-        todoTextArray.append(todoText)
-        todoTimeArray.append(todoTime)
-        colorNumberArray.append(colorNumber)
-        
-        DataInput(todoText: todoText, todoTime: todoTime, colorNumberCount: colorNumberCount)
+        DataInput(todoText: todoText, todoTime: todoTime, colorNumberCount: colorNumber)
             
-        let timeData4 = TodoData()
-        let timeDate4 = dateFromString(string:todoTimeArray[todotimeCount])
-        timeData4.date = timeDate4
-        timeData4.string = todoTextArray[todotextCount]
-        timeData4.Int = colorNumberArray[colorNumberCount]
-        DataArray.append(timeData4)
-//        ud.set(DataArray, forKey: "todo")
-            
-        dataChange()
-       
+        let todoData = TodoData()
+        let timeDate4 = dateFromString(string:todoTime)
+        todoData.todoDate = timeDate4
+        todoData.todoString = todoText
+        todoData.colornumber = colorNumber
+        self.todoArray.insert(todoData, at: 0)
+            let userDefaults = UserDefaults.standard
+                           do {
+                               let archivedData: Data = try NSKeyedArchiver.archivedData(withRootObject: self.todoArray, requiringSecureCoding: false)
+                               userDefaults.set(archivedData, forKey: "todoList")
+                               userDefaults.synchronize()
+                           } catch {
+                               print(error)
+                           }
+                       
+        viewDidLoad()
         todoTableView.reloadData()
             
         timeTextFiled.text = ""
@@ -509,7 +509,7 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
             todoTextArray.remove(at: indexPath!.row)
             todoTimeArray.remove(at: indexPath!.row)
             colorNumberArray.remove(at: indexPath!.row)
-            DataArray.remove(at: indexPath!.row)
+            todoArray.remove(at: indexPath!.row)
             todoTableView.reloadData()
          }
     }
@@ -537,10 +537,10 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
               
       
 
-      func dataChange(){
+    func dataChange(){
        
-       DataArray = DataArray.sorted(by: { (a, b) -> Bool in
-                  return a.date < b.date
+        todoArray = todoArray.sorted(by: { (a, b) -> Bool in
+            return a.todoDate < b.todoDate
                   })
        
    }
@@ -549,30 +549,23 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
         
         let fetchDataRef = Database.database().reference().child("todoData")
         
-        fetchDataRef.observeSingleEvent(of: .value, with: {(snapshot) in
-                   
-                   let snapShopData = snapshot.value as AnyObject
-                   print(snapshot)
-                   let todo = snapShopData.value(forKey: "todo") as! String
-                   let time = snapShopData.value(forKey: "time") as! String
+             fetchDataRef.observe(.childAdded) { (snapShot) in
+       
+                   let snapShopData = snapShot.value as AnyObject
+                   let todoString = snapShopData.value(forKey: "todo") as! String
+                   let timeString = snapShopData.value(forKey: "time") as! String
                    let colorNumberCount = snapShopData.value(forKey: "colorCount") as! Int
-                   let todoCount:Int = self.todoTimeArray.count
                 
-                   self.todoTextArray.append(todo)
-                   self.todoTimeArray.append(time)
-                   self.colorNumberArray.append(colorNumberCount)
-                   
                    let todoData = TodoData()
-                   let timeDate = self.dateFromString(string:self.todoTimeArray[todoCount])
-                   todoData.date = timeDate
-                   todoData.string = self.todoTextArray[todoCount]
-                   todoData.Int = self.colorNumberArray[todoCount]
-                   self.DataArray.append(todoData)
-                   print("データ入手成功")
-        
-        }
-    
+                   let timeDate = self.dateFromString(string: timeString)
+                   todoData.todoDate = timeDate
+                   todoData.todoString = todoString
+                   todoData.colornumber = colorNumberCount
+                   self.todoArray.append(todoData)
+                   self.todoTableView.reloadData()
+         }
     }
+    
     
     
     func DataInput(todoText:String,todoTime:String,colorNumberCount:Int){
