@@ -43,7 +43,6 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
     
      let ud = UserDefaults.standard
      
-
      override func viewDidLoad() {
         super.viewDidLoad()
                   
@@ -58,22 +57,8 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
         todoTextField.delegate = self
        
         
-        let timeData1 = TodoData()
-        let timeDate1 = dateFromString(string:todoTimeArray[0])
-        timeData1.todoDate = timeDate1
-        timeData1.todoString = todoTextArray[0]
-        timeData1.colornumber = colorNumberArray[0]
-        todoArray.append(timeData1)
-        
-        let timeData2 = TodoData()
-        let timeDate2 = dateFromString(string:todoTimeArray[1])
-        timeData2.todoDate = timeDate2
-        timeData2.todoString = todoTextArray[1]
-        timeData2.colornumber = colorNumberArray[1]
-        todoArray.append(timeData2)
-        
-//        fetchData()
-        
+   
+
         if let storedData = UserDefaults().data(forKey: "todoList") {
                    do {
                        let unarchivedData = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(storedData)
@@ -82,38 +67,14 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
                        print(error)
                    }
                }
-//
-        
-//        let timeData3 = Data()
-//        let timeDate3 = dateFromString(string:todoTimeArray[2])
-//        timeData3.date = timeDate3
-//        timeData3.string = todoTextArray[2]
-//        timeData3.Int = colorNumberArray[2]
-//        DataArray.append(timeData3)
-        
-        
         
         configureObserver()
         dataChange()
-        
-        
-        
-//        let toolbar = UIToolbar(frame: CGRectMake(0, 0, 0, 35))
-//        let space = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: self, action: nil)
-//        space.width = 12
-//        let flexSpaceItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
-//        let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
-//        let cancelItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
-//        toolbar.setItems([flexSpaceItem,cancelItem,doneItem,space], animated: true)
-//
-        
+
         let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(cellLongPressed))
         longPressRecognizer.delegate = self
         todoTableView.addGestureRecognizer(longPressRecognizer)
      
-       
-    
-        
         actionButton.buttonImage = UIImage(systemName: "line.horizontal.3")
         actionButton.buttonImageSize = CGSize(width: 50, height: 50)
         actionButton.buttonColor = .blue
@@ -122,7 +83,6 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
         
         actionButton.buttonAnimationConfiguration = .transition(toImage: UIImage(systemName: "xmark")!)
         actionButton.itemAnimationConfiguration = .slideIn(withInterItemSpacing: 80)
-        
         
         let item1 = actionButton.addItem()
         item1.titleLabel.text = "天気予報     "
@@ -148,21 +108,14 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
         item3.action = { [self] item in
          self.performSegue(withIdentifier: "memo", sender: nil)
             
-       
-            
         }
-        
-        
+    
         view.addSubview(actionButton)
         actionButton.translatesAutoresizingMaskIntoConstraints = false
         actionButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16).isActive = true
         actionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16).isActive = true
         
             }
-
-        
-    
-   
 
     override func viewWillAppear(_ animated: Bool) {
         todoTableView.delegate = self
@@ -430,8 +383,7 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
                            } catch {
                                print(error)
                            }
-                       
-        viewDidLoad()
+        dataChange()
         todoTableView.reloadData()
             
         timeTextFiled.text = ""
@@ -446,25 +398,8 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
         
             
         }
-//        }else if todoTextField.text != ""{
-//
-//            todoText = todoTextField.text!
-//            todoTextArray.append(todoText)
-//            todoTimeArray.append("")
-//            todoTextField.text = ""
-//            timeTextFiled.text = ""
-//            colorNumberArray.append(colorNumber)
-//            blueButton.layer.borderWidth = 0
-//            yellowButton.layer.borderWidth = 0
-//            colorNumber = 0
-//            plusTodoView.isHidden = true
-//            todoTableView.reloadData()
-//
-//        }
     }
-    
-    
-    
+
     @IBAction func deliteTap(_ sender: Any) {
         timeTextFiled.text = ""
         todoTextField.text = ""
@@ -478,26 +413,6 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
     }
     
     
-    
-    
-    
-//
-//    @IBAction func memoButton(_ sender: Any) {
-//    performSegue(withIdentifier: "memo", sender: nil)
-//    }
-//
-//
-//
-//    @IBAction func calender(_ sender: Any) {
-//        let CalendarViewContorller = calendarViewController()
-//        present(CalendarViewContorller,animated: true ,completion: nil)
-//
-//    }
-    
-    
-  
-    
-    
     @objc func cellLongPressed(recognizer: UILongPressGestureRecognizer) {
         let point = recognizer.location(in: todoTableView)
         let indexPath = todoTableView.indexPathForRow(at: point)
@@ -506,10 +421,8 @@ class TodoListViewController: UIViewController,UITableViewDataSource,UITableView
         } else if recognizer.state == UIGestureRecognizer.State.began  {
             // 長押しされた場合の処理
             showAnimation()
-            todoTextArray.remove(at: indexPath!.row)
-            todoTimeArray.remove(at: indexPath!.row)
-            colorNumberArray.remove(at: indexPath!.row)
             todoArray.remove(at: indexPath!.row)
+            dataChange()
             todoTableView.reloadData()
          }
     }

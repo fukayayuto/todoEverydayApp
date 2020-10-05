@@ -25,7 +25,17 @@ class ConfigurationViewController: UITableViewController {
         super.viewDidLoad()
         cell2.textLabel?.text = "通知機能"
         
-      
+        if ud.object(forKey: "switch") != nil{
+                  count = ud.object(forKey: "switch") as! Int
+        }else{
+            count = 0
+        }
+              if count == 0{
+                  switchButton.isOn = true
+                  OnAction()
+              }else if count == 1{
+                  switchButton.isOn = false
+              }
     }
   
    

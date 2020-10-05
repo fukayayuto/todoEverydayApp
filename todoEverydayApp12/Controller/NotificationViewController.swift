@@ -35,13 +35,11 @@ class NotificationViewController: UITableViewController {
             timeTextField.text = "\(hour):\(time)"
         }
         
-        
         if ud.object(forKey: "switch") != nil{
                   count = ud.object(forKey: "switch") as! Int
         }else{
             count = 0
         }
-              
               if count == 0{
                   switchButton.isOn = true
                   OnAction()
